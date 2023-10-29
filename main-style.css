@@ -1,0 +1,502 @@
+@font-face {
+  font-family: 'Montserrat', sans-serif;
+}
+/*Переопределяем расчёт размеров у боксов с надеждой, что это нам когда-нибудь поможет*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+  max-width:1280px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+
+/* Верхушка */
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-columns: 1fr 4fr 1fr;
+  margin: 10px;
+
+}
+
+/* Выпадающее меню Только в мобильной и планшетной версии сайта */
+.page-header__dropdown {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+.dropdown {
+  /* position: relative;  */
+   display: inline-block;
+ }
+ 
+ .dropdown__content {
+   display: none;
+   position: absolute;
+   left: 0px;
+   top: 62px; 
+   z-index: 1;
+ }
+
+/* Визуал кнопки меню - скрываем её*/
+
+
+.page-header__dropdown__content {
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Ссылки внутри выпадающего списка */
+.page-header__dropdown__content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.page-header__dropdown__button {
+  border: none;
+  background: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; 
+}
+/* main --- main--- main--- main--- main--- main--- main--- main--- main--- main--- main--- main--- main--- main*/
+
+.main {
+  font-family: "Montserrat";
+  margin-left: 10px;
+  margin-top: 2em;
+  
+}
+
+
+.main__h1 {
+  color: #2A2367;
+  margin-top: 1em;
+  margin-bottom: -2em;
+  font-size: 2vw;
+}
+
+.main__img-container {
+  display: block;
+  /* */
+  height: auto;
+  grid-template-rows: 100%;
+  grid-template-columns: 100%;
+  justify-content: center;
+  margin-bottom: 54px;
+}
+
+.main__content {
+  display: flex;
+}
+
+.main__cost-link_visual-button {
+  margin: 0px auto;
+  width: 275px;
+  height: 60px;
+  border-radius: 5px;
+}
+
+.link-btn {
+  text-decoration: none;
+  font-family: Montserrat;
+  font-weight: 800;
+}
+
+.link-btn__visual-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6B5AF9;
+  color: white;
+  font-size: 12px;
+}
+
+.text_style2 {
+  line-height: 137.4%;
+}
+
+.text_style2-colored {}
+
+
+.text_centered {
+  display: block;
+  text-align: center;
+}
+
+.text_colored-blue {
+  color: #6B5AF9;
+}
+
+/* ........................ ........................................................................................................................*/
+/* ........................ ........................................................................................................................*/
+/* Телефон +==+===Телефон +==+===Телефон +==+===Телефон +==+===Телефон +==+===Телефон +==+===Телефон +==+===Телефон +==+===Телефон +==+=== */
+@media all and (max-width: 760px) {
+  .agent__tablepc {
+    display: none;
+  }
+
+  .main__h1 {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .main__img-container {
+    max-width: 100%;
+  }
+
+  .text_style1 {
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .text_style1-colored {
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  .text_style2 {
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0 10px;
+    padding: 0px 15px;
+    font-size: 12px;
+  }
+
+  .text_style2-colored {
+    font-weight: 500;
+    font-size: 12px;
+  }
+
+  .text_centered-in-portrait-mode {
+    display: block;
+    text-align: center;
+  }
+
+  .main__cost-link {
+    margin-bottom: 10px;
+  }
+
+  .text_style1 {
+    margin-top: 29px;
+    margin-bottom: 50px;
+    margin-left: 7px;
+  }
+
+  .main__content {
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+  }
+}
+
+
+
+/* ........................................................................................................................................................................ */
+/* ........................................................................................................................................................................ */
+/* ...Планшет........Планшет........Планшет...Планшет..Планшет...Планшет....Планшет.....Планшет....Планшет.....Планшет......Планшет....................................... */
+@media all and (min-width: 760px) and (max-width: 1200px) {
+  .agent__tablepc {
+    display: none;
+  }
+  .agent__notablet {
+    display: none;
+  }  
+  body {    
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .page-header {
+    margin-right: 32px;
+    margin-left:32px ;
+  }
+  .main {
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr min(70vw, 960px);
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "h1 image""content image";    
+    justify-items: center;
+    align-content: center;
+    margin-left: 10px;
+  }
+  .main__h1 {
+    grid-area: h1;
+    font-size: min(5vw, 24px);
+    font-weight: 700;   
+    margin-bottom: 21px;
+    justify-self: start; 
+    position:absolute;
+    margin-left: 10px;
+  }
+
+  .main__img-container {
+    grid-area: image;    
+    width: min(70vw, 960px);
+    margin-top: 5px;    
+    margin-bottom: 0;
+    
+  }
+  .main__content {    
+    grid-area: content;   
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-start;  
+  }
+  .main__cost-link {
+    margin-top: 54px;
+    justify-self: flex-end;
+    margin-bottom: 10px;
+  } 
+
+
+
+  /* ..............................................................................................................................*/
+  /*Настройки текста---Настройки текста---Настройки текста---Настройки текста---Настройки текста---Настройки текста---Настройки текста*/
+ 
+  .text_style1 {
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  .text_style1-colored {
+    font-weight: 700;
+    font-size: 12px;
+  }
+
+  .text_style2 {
+    font-weight: 600;
+    font-size: 12px;
+    margin-top: auto;
+  }
+
+  .text_style2-colored {
+    font-weight: 600;
+    font-size: 12px;
+    text-indent: 0;
+  }
+}
+/*   Выправляем картинку, когда она точно не заденет собой заголовок   */
+@media all and (min-width: 960px) and (max-width: 1200px)
+{
+  .main__img-container {
+    margin-top: -40px;
+  }
+
+
+}
+
+/* ........................................................................................................................ .........................*/
+/* ........................................................................................................................ .........................*/
+/* для ПК  для ПК  для ПК   для ПК   для ПК  для ПК  для ПК  для ПК   для ПК  для ПК   для ПК   для ПК  для ПК   для ПК   для ПК  для ПК   для ПК   для ПК  */
+@media all and (min-width: 1200px) {
+  .agent__mobile {
+    display: none;
+  }
+
+  /* ........................................................................................................................ .........................*/
+  /* Вкладка с навигацией для ПК  Вкладка с навигацией для ПКВкладка с навигацией для ПКВкладка с навигацией для ПКВкладка с навигацией для ПК*/
+  .page-header__big-menu {}
+
+  .page-header__big-menu__list {
+    list-style-type: none;
+    /*Убираем маркеры */
+    display: flex;
+    gap: 27px;
+    justify-content: flex-start;
+  }
+
+  .page-header__big-menu__list__item {}
+
+  .page-header__big-menu__list__item a {
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #2A2367;
+  }
+
+  /* ........................................................................................................................ .........................*/
+  /* Вкладка с инфой справа для ПК  Вкладка с инфой справа для ПК Вкладка с инфой справа для ПК Вкладка с инфой справа для ПК Вкладка с инфой справа для ПК   */
+
+
+  .page-header__big-info {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-header__big-info__block-contacts {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    justify-items: flex-end;
+    justify-self: flex-end;
+  }
+
+  .page-header__big-info__block-contacts__link-telegram {
+    width: 16px;
+    height: auto;
+    padding-bottom: 16px;
+  }
+
+  .page-header__big-info__block-contacts__link-whatsapp {
+    width: 16px;
+    height: auto;
+    padding-bottom: 16px;
+  }
+
+  .page-header__big-info__block-contacts__info {
+    text-align: end;
+    font-size: 24px;
+    color: #2A2367;
+  }
+
+  .page-header__big-info__block-contacts__info__primetime {
+    font-size: 12px;
+  }
+
+  .page-header__big-info__call-link {}
+
+  .page-header__big-info__call-link__visual-button {
+    margin: auto;
+    margin-left: 20px;
+    width: 177px;
+    height: 60px;
+    border-radius: 5px;
+  }
+
+  /* ........................................................................................................................ .........................*/
+  .main {
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "h1 h1""content image";
+    justify-content: start;
+    align-content: start;
+    row-gap: 33px;
+  }
+
+  .main__h1 {
+    grid-area: h1;
+    font-size: 36px ;
+    font-weight: 700;
+    overflow: visible;
+  }
+
+  .main__img-container {
+    grid-area: image;
+    margin-top: -160px;
+  }
+
+  .main__content {
+    grid-area: content;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .main__cost-link {
+    margin-top: 116px;
+  }
+
+  /* Вот бы уметь адекватно адаптировать размеры не как инвалид*/
+  .text_style1 {
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .text_style1-colored {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .text_style2 {
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  .text_style2-colored {
+    font-weight: 600;
+    font-size: 14px;
+    text-indent: 0;
+  }
+}
+
+
+
+/* Выпадающее меню для мобилы и планшетов----Выпадающее меню для мобилы и планшетов----Выпадающее меню для мобилы и планшетов*/
+.dropdown-menu-mobile {  margin-left: auto; margin-right: auto; z-index: 2; background-color: white; box-shadow: 0px 0px 8px -3px black;
+}
+.dropdown-menu-mobile {
+  width: 360px;  
+  height: calc(100% - 62px);
+  flex-direction: column; 
+  align-items: center; 
+  
+   
+}
+
+.dropdown-menu-mobile__nav__list {list-style-type: none; text-align: center; padding: 0;  width: 320px;}
+.dropdown-menu-mobile__nav__list__list-item {
+  color:#2A2367;
+  font-size: 14px;  
+  font-weight: 700;
+}
+
+/*Механика выпадающего списка */
+
+/*
+.dropdown:hover .dropdown__content {
+  display: flex;
+}   */
+
+.dropdown__button:checked ~ .dropdown__content {
+  /* position: relative;  */
+  display: flex;
+ }
+ .dropdown__button .dropdown__content {
+  /* position: relative;  */
+  display: none;
+ }
+.dropdown-menu-mobile__nav__list__list-item {
+  
+  padding-top: 28px;
+}
+.dropdown-menu-mobile__nav__list__list-item a {
+  opacity: 1;
+}
+.dropdown-menu-mobile__nav__list__list-item a:hover {
+  opacity: 0.6;
+  color: rgb(160, 4, 30);
+}
+.dropdown-menu-mobile__info {
+  margin-top: auto;
+  margin-bottom: 42px;
+  color:  #6B5AF9;
+  font-size: 18px; 
+  font-weight: 700;
+   
+}
+.dropdown-menu-mobile__info p:last-child {
+  margin-top: 32px;
+}
