@@ -1,9 +1,10 @@
 @font-face {
   font-family: 'Montserrat', sans-serif;
 }
+
 /*Переопределяем расчёт размеров у боксов с надеждой, что это нам когда-нибудь поможет*/
 html {
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
 
 *, *:before, *:after {
@@ -14,10 +15,9 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'Montserrat', sans-serif;
-  max-width:1280px;
+  max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 
@@ -28,59 +28,15 @@ body {
   align-items: center;
   grid-template-columns: 1fr 4fr 1fr;
   margin: 10px;
-
 }
 
-/* Выпадающее меню Только в мобильной и планшетной версии сайта */
-.page-header__dropdown {
-  margin: 0px;
-  padding: 0px;
-  border: 0px;
-}
-.dropdown {
-  /* position: relative;  */
-   display: inline-block;
- }
- 
- .dropdown__content {
-   display: none;
-   position: absolute;
-   left: 0px;
-   top: 62px; 
-   z-index: 1;
- }
-
-/* Визуал кнопки меню - скрываем её*/
-
-
-.page-header__dropdown__content {
-  background-color: #f1f1f1;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-}
-
-/* Ссылки внутри выпадающего списка */
-.page-header__dropdown__content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.page-header__dropdown__button {
-  border: none;
-  background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; 
-}
 /* main --- main--- main--- main--- main--- main--- main--- main--- main--- main--- main--- main--- main--- main*/
 
 .main {
   font-family: "Montserrat";
   margin-left: 10px;
   margin-top: 2em;
-  
+
 }
 
 
@@ -150,6 +106,9 @@ body {
   .agent__tablepc {
     display: none;
   }
+  .dropdown__button:checked~.dropdown__content {
+   width: 100vw;
+  }
 
   .main__h1 {
     font-size: 16px;
@@ -214,64 +173,71 @@ body {
   .agent__tablepc {
     display: none;
   }
+
   .agent__notablet {
     display: none;
-  }  
-  body {    
+  }
+
+  body {
     margin-left: auto;
     margin-right: auto;
   }
+
   .page-header {
     margin-right: 32px;
-    margin-left:32px ;
+    margin-left: 32px;
   }
+
   .main {
     margin: 0px;
     padding: 0px;
     display: grid;
     grid-template-columns: 1fr min(70vw, 960px);
     grid-template-rows: 100px 1fr;
-    grid-template-areas: "h1 image""content image";    
+    grid-template-areas: "h1 image""content image";
     justify-items: center;
     align-content: center;
     margin-left: 10px;
   }
+
   .main__h1 {
     grid-area: h1;
     font-size: min(5vw, 24px);
-    font-weight: 700;   
+    font-weight: 700;
     margin-bottom: 21px;
-    justify-self: start; 
-    position:absolute;
+    justify-self: start;
+    position: absolute;
     margin-left: 10px;
   }
 
   .main__img-container {
-    grid-area: image;    
+    grid-area: image;
     width: min(70vw, 960px);
-    margin-top: 5px;    
+    margin-top: 5px;
     margin-bottom: 0;
-    
+
   }
-  .main__content {    
-    grid-area: content;   
+
+  .main__content {
+    grid-area: content;
     display: flex;
     flex-direction: column;
     align-content: space-between;
     align-items: flex-start;
-    justify-content: flex-start;  
+    justify-content: flex-start;
   }
+
   .main__cost-link {
     margin-top: 54px;
     justify-self: flex-end;
     margin-bottom: 10px;
-  } 
+  }
 
 
 
   /* ..............................................................................................................................*/
   /*Настройки текста---Настройки текста---Настройки текста---Настройки текста---Настройки текста---Настройки текста---Настройки текста*/
- 
+
   .text_style1 {
     font-weight: 400;
     font-size: 12px;
@@ -294,9 +260,9 @@ body {
     text-indent: 0;
   }
 }
+
 /*   Выправляем картинку, когда она точно не заденет собой заголовок   */
-@media all and (min-width: 960px) and (max-width: 1200px)
-{
+@media all and (min-width: 960px) and (max-width: 1200px) {
   .main__img-container {
     margin-top: -40px;
   }
@@ -397,7 +363,7 @@ body {
 
   .main__h1 {
     grid-area: h1;
-    font-size: 36px ;
+    font-size: 36px;
     font-weight: 700;
     overflow: visible;
   }
@@ -442,61 +408,104 @@ body {
   }
 }
 
-
-
 /* Выпадающее меню для мобилы и планшетов----Выпадающее меню для мобилы и планшетов----Выпадающее меню для мобилы и планшетов*/
-.dropdown-menu-mobile {  margin-left: auto; margin-right: auto; z-index: 2; background-color: white; box-shadow: 0px 0px 8px -3px black;
-}
 .dropdown-menu-mobile {
-  width: 360px;  
-  height: calc(100% - 62px);
-  flex-direction: column; 
-  align-items: center; 
-  
-   
+  z-index: 2;
+  background-color: white;
+  box-shadow: 0px 0px 8px -3px black;
+  width: 360px;
+  height:  calc(100vh - 62px);;
+  flex-direction: column;
+  align-items: center;
 }
 
-.dropdown-menu-mobile__nav__list {list-style-type: none; text-align: center; padding: 0;  width: 320px;}
-.dropdown-menu-mobile__nav__list__list-item {
-  color:#2A2367;
-  font-size: 14px;  
-  font-weight: 700;
+/*Механика и визуал выпадающего списка */
+.dropdown__button:checked~.dropdown__content {
+  display: flex;
+  flex-shrink:0;
 }
+.dropdown__button:checked ~ .page-header {position: fixed;}
 
-/*Механика выпадающего списка */
-
-/*
-.dropdown:hover .dropdown__content {
-  display: flex;
-}   */
-
-.dropdown__button:checked ~ .dropdown__content {
-  /* position: relative;  */
-  display: flex;
- }
- .dropdown__button .dropdown__content {
-  /* position: relative;  */
+.dropdown__button:checked~.page-header__dropdown__button__visual .page-header__dropdown__button__visual_rectangle3 {
+  width: 41px;
+  background-color: #43CD93;
+}
+.dropdown__content {
   display: none;
- }
+  position: absolute;
+  left: 0px;
+  top: 62px;
+  z-index: 1;
+}
+
+.dropdown-menu-mobile__nav__list {
+  list-style-type: none;
+  text-align: center;
+  padding: 0;
+  width: 320px;
+}
+
 .dropdown-menu-mobile__nav__list__list-item {
-  
+  color: #2A2367;
+  font-size: 14px;
+  font-weight: 700;
   padding-top: 28px;
 }
+
 .dropdown-menu-mobile__nav__list__list-item a {
   opacity: 1;
+  text-decoration: none;
 }
+
 .dropdown-menu-mobile__nav__list__list-item a:hover {
   opacity: 0.6;
   color: rgb(160, 4, 30);
 }
+
 .dropdown-menu-mobile__info {
   margin-top: auto;
   margin-bottom: 42px;
-  color:  #6B5AF9;
-  font-size: 18px; 
+  color: #6B5AF9;
+  font-size: 18px;
   font-weight: 700;
-   
+  text-align: center;
 }
-.dropdown-menu-mobile__info p:last-child {
-  margin-top: 32px;
+
+.dropdown-menu-mobile__info p:first-child {
+  margin-bottom: 32px;
 }
+
+/*  ................ Визуал кнопки выпадающего меню. Кнопка состоит из трёх прямоугольников фиксированного размера */
+.page-header__dropdown__button { /*Скроем ванильный чекбокс*/
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+} 
+/* Рисуем кнопку на css из трёх палок */
+.page-header__dropdown__button__visual {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.rectangle {
+  border-radius: 1px;
+  background: var(--2, #6B5AF9);
+}
+
+.page-header__dropdown__button__visual_rectangle1 {
+  width: 41px;
+  height: 4px;
+}
+
+.page-header__dropdown__button__visual_rectangle2 {
+  width: 27px;
+  height: 4px;
+}
+
+.page-header__dropdown__button__visual_rectangle3 {
+  /*На эту палку анимация при нажатии */
+  width: 15px;
+  height: 4px;
+  transition: width 0.6s, background-color 0.5s;
+}
+/*........................................................................ */
