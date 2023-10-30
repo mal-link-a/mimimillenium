@@ -109,6 +109,9 @@ body {
   .dropdown__button:checked~.dropdown__content {
    width: 100vw;
   }
+  .dropdown-menu-mobile__background {
+    display: none;
+  }
 
   .main__h1 {
     font-size: 16px;
@@ -412,11 +415,20 @@ body {
 .dropdown-menu-mobile {
   z-index: 2;
   background-color: white;
-  box-shadow: 0px 0px 8px -3px black;
+  border-top:1px solid #BBBBBB;
   width: 360px;
   height:  calc(100vh - 62px);;
   flex-direction: column;
   align-items: center;
+}
+.dropdown-menu-mobile__background
+{
+  position:absolute;
+  left:360px;
+  width: 100vw;
+  height:  calc(100vh - 62px);
+  background: rgba(163, 161, 161, 0.85);
+  backdrop-filter: blur(2px); 
 }
 
 /*Механика и визуал выпадающего списка */
