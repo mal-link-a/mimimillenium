@@ -13,126 +13,159 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
   <!-- js-->
-  <script>
-    var bttn = document.getElementById("dropdown1");   
-    function showAlert() { 
 
-    /*alert("Hello!");*/
-    const checkbox = document.getElementById("dropdown1");
-      if (checkbox.checked) {
-        document.body.style.overflow = "hidden";
-        document.body.style.height = "100vw";  
-      } else {       
-        document.body.style.overflow = "auto";
-        document.body.style.height = "auto"; 
-      }
-    }
-  </script>
+  <!-- ~~~~Swiper~~~~ -->
+  <link rel="stylesheet"   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <!-- -->
 </head>
 
-<body id="body">
-  <!--ВЕРХНЯЯ ПАНЕЛЬ — кнопка меню - логотип - кнопка обратной связи -->
-  <!--НА хай размерах — кнопка меню  меню становится обычным меню nav - логотип переезжает в начало - кнопка обратной связи трансформируется и получает новую информацию -->
-  <header class="page-header">
-    <div class="page-header__dropdown dropdown agent__mobile">
-      <label>
-        <input type="checkbox" class="page-header__dropdown__button dropdown__button" id="dropdown1" onchange="showAlert()">
-        <div class="page-header__dropdown__button__visual">
-          <div class="page-header__dropdown__button__visual_rectangle1 rectangle"></div>
-          <div class="page-header__dropdown__button__visual_rectangle2 rectangle"></div>
-          <div class="page-header__dropdown__button__visual_rectangle3 rectangle"></div>
-        </div>
-        <div class="dropdown-menu-mobile dropdown__content">
-          <nav class="dropdown-menu-mobile__nav">
-            <ul class="dropdown-menu-mobile__nav__list">
-              <li class="dropdown-menu-mobile__nav__list__list-item"> <a>Главная</a></li>
-              <li class="dropdown-menu-mobile__nav__list__list-item"><a>Интернет-магазины, которые продают</a></li>
-              <li class="dropdown-menu-mobile__nav__list__list-item"><a>Что вы получаете</a></li>
-              <li class="dropdown-menu-mobile__nav__list__list-item"><a>Контакты</a></li>
-              <li class="dropdown-menu-mobile__nav__list__list-item"><a>Исследуем бизнес</a></li>
-              <li class="dropdown-menu-mobile__nav__list__list-item"><a>Этапы</a></li>
-              <li class="dropdown-menu-mobile__nav__list__list-item"><a>Обратная связь</a></li>
-            </ul>
-          </nav>
-          <div class="dropdown-menu-mobile__info">
-            <p>info@millenium.ru</p>
-            <p>+7 (495) 792-66-69<br>пн-пт 10:00–19:00</p>
-          </div>  
-          <div class="dropdown-menu-mobile__background"></div>        
-        </div>
-        
-        
-      </label>
-    </div>
-  
-    <a class="page-header__logo image-link" href="#"><img class="page-header__logo__image image-link__img" src="logo.svg"
-        alt="Millenium"></a>
-  
-    <a class="page-header__call-link-mobile image-link agent__mobile" href="#">
-      <img class="page-header__call-link__agent-mobile image-link__img" src="call_little.svg" alt="Обратная связь">
-      <!-- Отображается на мобилках и планшетах-->
-    </a>
-  
-    <nav class="page-header__big-menu agent__tablepc">
-      <ul class="page-header__big-menu__list">
-        <li class="page-header__big-menu__list__item"> <a href="#">Главная</a> </li>
-        <li class="page-header__big-menu__list__item"> <a href="#">Цены</a> </li>
-        <li class="page-header__big-menu__list__item"><a href="#">Кейсы и отзывы</a> </li>
-        <li class="page-header__big-menu__list__item"> <a href="#">Контакты</a></li>
-      </ul>
-    </nav>
-  
-    <div class="page-header__big-info agent__tablepc">
-      <div class="page-header__big-info__block-contacts">
-        <a href="#" class="page-header__big-info__block-contacts__link-telegram"> <img src="telegram 1.svg"
-            alt="telegram"></imgsrc> </a>
-  
-        <a href="#" class="page-header__big-info__block-contacts__link-whatsapp"><img src="whatsapp 1.svg" alt="whatsapp">
-          </imgsrc> </a>
-        <p class="page-header__big-info__block-contacts__info">+ 7 (495) 555 65 65 <br> <span
-            class="page-header__big-info__block-contacts__info__primetime">Ежедневно с 09:00 до 18:00</span></p>
-      </div>
-      <a href="#" class="page-header__big-info__call-link link-btn">
-        <div class="page-header__big-info__call-link__visual-button link-btn__visual-button">Заказать звонок</div>
-      </a><!-- Отображается на ПК-->
-    </div>
-  </header>
-
-  <!-- Основной контент —  -->
+<body>
   <main class="main">
-    <h1 class="main__h1">Разработка интернет-магазинов <br class="agent__notablet"><span class="text_colored-blue">на
-        1С-Битрикс</span></h1><br>
-
-
-    <img class="main__img-container" src="main_img.png" alt="">
-
-
-    <div class="main__content">
-
-      <div class="text_size text_style1"> Разработаем интернет-магазин за 30 дней с уникальным дизайном и продуманной
-        структурой который <span class=" text_colored-blue text_style1-colored"> выделит вас на фоне конкурентов</span>
+    <h2 class="advantages__title text-style_normal">Мы создаём интернет-магазины, <span class="text-style_colored">которые продают</span></h2>
+    <div class="advantages-panel agent_no-mobile">
+      <div class="advantages-panel__item">
+        <p class="advantages-panel__item__number">01</p>
+        <p class="advantages-panel__item__title">Удобный интерфейс</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Блоковая подача информации,
+          удобные кнопки, карточки товаров,
+          понятное меню и легкая навигация
+          по многостраничному сайту.</p>
       </div>
 
-      <a href="#" class="main__cost-link link-btn">
-        <div class="main__cost-link_visual-button link-btn__visual-button ">Узнать стоимость</div>
-      </a>
-
-      <div class="text_size text_style2 text_centered-in-portrait-mode"><span
-          class="text_colored-blue text_style2-colored">
-          Оставьте заявку и получите бесплатную консультацию от специалиста, полный расчет стоимости разработки и бонус:
-        </span><br> «15 сервисов которые покажут стратегию продвижения конкурентов, всё об их выдаче в поиске и не
-        только»
+      <div class="advantages-panel__item">
+        <p class="advantages-panel__item__number">02</p>
+        <p class="advantages-panel__item__title">Продающая структура</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Делаем анализ вашей целевой
+          аудитории и вашего предложения. Опираясь на анализ прописываем продающую
+          структуру сайта.</p>
       </div>
 
-      
+      <div class="advantages-panel__item">
+        <p class="advantages-panel__item__number">03</p>
+        <p class="advantages-panel__item__title">Адаптивность</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Сайт корректно отображается на
+           различных устройствах, элементы динамически подстраиваются под различные
+            разрешения экрана, что повышает конверсию сайта в покупку.</p>
+      </div>
 
+      <div class="advantages-panel__item">
+        <p class="advantages-panel__item__number">04</p>
+        <p class="advantages-panel__item__title">Уникальный дизайн</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Не пользуемся шаблонными решениями.
+           Под каждый проект разрабатывается индивидуальный дизайн который подчеркнет
+            имидж компании.</p>
+      </div>
 
+      <div class="advantages-panel__item">
+        <p class="advantages-panel__item__number">05</p>
+        <p class="advantages-panel__item__title">Защита и безопасность</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Подключаем HTPS протокол,
+           защиту от DDOS атак, чтобы данные клиентов были в безопасности.</p>
+      </div>
+
+      <div class="advantages-panel__item">
+        <p class="advantages-panel__item__number">06</p>
+        <p class="advantages-panel__item__title">SEO оптимизация</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Сайты соответствуют требованиям
+           поисковой оптимизации, они без труда покоряют топы поисковой выдачи
+            Яндекс и Google.</p>
+      </div>
     </div>
+</div>
+
+    <!-- Swiper -->
+  <div class="swiper mySwiper agent_mobile">
+    <div class="swiper-wrapper">
+      <div class="advantages-panel__item swiper-slide">
+        <p class="advantages-panel__item__number">01</p>
+        <p class="advantages-panel__item__title">Удобный интерфейс</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Блоковая подача информации,
+          удобные кнопки, карточки товаров,
+          понятное меню и легкая навигация
+          по многостраничному сайту.</p>
+      </div>
+
+      <div class="advantages-panel__item swiper-slide">
+        <p class="advantages-panel__item__number">02</p>
+        <p class="advantages-panel__item__title">Продающая структура</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Делаем анализ вашей целевой
+          аудитории и вашего предложения. Опираясь на анализ прописываем продающую
+          структуру сайта.</p>
+      </div>
+
+      <div class="advantages-panel__item swiper-slide">
+        <p class="advantages-panel__item__number">03</p>
+        <p class="advantages-panel__item__title">Адаптивность</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Сайт корректно отображается на
+           различных устройствах, элементы динамически подстраиваются под различные
+            разрешения экрана, что повышает конверсию сайта в покупку.</p>
+      </div>
+
+      <div class="advantages-panel__item swiper-slide">
+        <p class="advantages-panel__item__number">04</p>
+        <p class="advantages-panel__item__title">Уникальный дизайн</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Не пользуемся шаблонными решениями.
+           Под каждый проект разрабатывается индивидуальный дизайн который подчеркнет
+            имидж компании.</p>
+      </div>
+
+      <div class="advantages-panel__item swiper-slide">
+        <p class="advantages-panel__item__number">05</p>
+        <p class="advantages-panel__item__title">Защита и безопасность</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Подключаем HTPS протокол,
+           защиту от DDOS атак, чтобы данные клиентов были в безопасности.</p>
+      </div>
+
+      <div class="advantages-panel__item swiper-slide">
+        <p class="advantages-panel__item__number">06</p>
+        <p class="advantages-panel__item__title">SEO оптимизация</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Сайты соответствуют требованиям
+           поисковой оптимизации, они без труда покоряют топы поисковой выдачи
+            Яндекс и Google.</p>
+      </div>      
+    </div>
+    <!--<div class="swiper-pagination"></div>   -->
+  </div>
+  <div class="swiper-pagination agent_mobile"></div>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+
+    <label class="advantages-button agent_no-mobile">
+      <div class="img_arrow">
+        <div class="img_arrow_left"></div>
+        <div class="img_arrow_right"></div>
+      </div>
+      <input type="checkbox" class="advantages-button__checkbox">    
+    </label>
+
+    <a href="#" class="main__cost-link link-btn">
+      <div class="main__cost-link_visual-button link-btn__visual-button ">Узнать стоимость</div>
+    </a>
+    
   </main>
-
-
+  <script src="main-src.js"></script>  
 </body>
-
 </html>
