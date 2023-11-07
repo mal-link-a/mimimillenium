@@ -13,18 +13,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
   <!-- js-->
 
-  <script src="main-src.js"></script> 
-    
+  <!-- ~~~~Swiper~~~~ -->
+  <link rel="stylesheet"   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ <!-- -->
 </head>
 
 <body>
   <main class="main">
     <h2 class="advantages__title text-style_normal">Мы создаём интернет-магазины, <span class="text-style_colored">которые продают</span></h2>
-    <div class="advantages-panel">
-      <div class="advantages-panel__item text-style_normal">
+    <div class="advantages-panel agent_no-mobile">
+      <div class="advantages-panel__item">
         <p class="advantages-panel__item__number">01</p>
         <p class="advantages-panel__item__title">Удобный интерфейс</p>
         <div class="advantages-panel__item__stick"></div>
@@ -78,18 +79,93 @@
             Яндекс и Google.</p>
       </div>
     </div>
+</div>
 
-    <label class="advantages-button">
+    <!-- Swiper -->
+  <div class="swiper mySwiper agent_mobile">
+    <div class="swiper-wrapper">
+      <div class="advantages-panel__item swiper-slide">
+        <p class="advantages-panel__item__number">01</p>
+        <p class="advantages-panel__item__title">Удобный интерфейс</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Блоковая подача информации,
+          удобные кнопки, карточки товаров,
+          понятное меню и легкая навигация
+          по многостраничному сайту.</p>
+      </div>
+
+      <div class="advantages-panel__item swiper-slide">
+        <p class="advantages-panel__item__number">02</p>
+        <p class="advantages-panel__item__title">Продающая структура</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Делаем анализ вашей целевой
+          аудитории и вашего предложения. Опираясь на анализ прописываем продающую
+          структуру сайта.</p>
+      </div>
+
+      <div class="advantages-panel__item swiper-slide">
+        <p class="advantages-panel__item__number">03</p>
+        <p class="advantages-panel__item__title">Адаптивность</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Сайт корректно отображается на
+           различных устройствах, элементы динамически подстраиваются под различные
+            разрешения экрана, что повышает конверсию сайта в покупку.</p>
+      </div>
+
+      <div class="advantages-panel__item swiper-slide">
+        <p class="advantages-panel__item__number">04</p>
+        <p class="advantages-panel__item__title">Уникальный дизайн</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Не пользуемся шаблонными решениями.
+           Под каждый проект разрабатывается индивидуальный дизайн который подчеркнет
+            имидж компании.</p>
+      </div>
+
+      <div class="advantages-panel__item swiper-slide">
+        <p class="advantages-panel__item__number">05</p>
+        <p class="advantages-panel__item__title">Защита и безопасность</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Подключаем HTPS протокол,
+           защиту от DDOS атак, чтобы данные клиентов были в безопасности.</p>
+      </div>
+
+      <div class="advantages-panel__item swiper-slide">
+        <p class="advantages-panel__item__number">06</p>
+        <p class="advantages-panel__item__title">SEO оптимизация</p>
+        <div class="advantages-panel__item__stick"></div>
+        <p class="advantages-panel__item__descriprtion">Сайты соответствуют требованиям
+           поисковой оптимизации, они без труда покоряют топы поисковой выдачи
+            Яндекс и Google.</p>
+      </div>      
+    </div>
+    <!--<div class="swiper-pagination"></div>   -->
+  </div>
+  <div class="swiper-pagination agent_mobile"></div>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+
+    <label class="advantages-button agent_no-mobile">
       <div class="img_arrow">
         <div class="img_arrow_left"></div>
         <div class="img_arrow_right"></div>
       </div>
-      <input type="checkbox" class="advantages-button__checkbox" id="advantages-show">    
+      <input type="checkbox" class="advantages-button__checkbox">    
     </label>
+
+    <a href="#" class="main__cost-link link-btn">
+      <div class="main__cost-link_visual-button link-btn__visual-button ">Узнать стоимость</div>
+    </a>
+    
   </main>
-  
-
-
+  <script src="main-src.js"></script>  
 </body>
-
 </html>
