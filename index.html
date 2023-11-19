@@ -13,159 +13,617 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-  <!-- js-->
 
-  <!-- ~~~~Swiper~~~~ -->
-  <link rel="stylesheet"   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+  <!-- 1.4 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
- <!-- -->
+  <!-- ~~~~~~~~~~~ -->
 </head>
 
-<body>
-  <main class="main">
-    <h2 class="advantages__title text-style_normal">Мы создаём интернет-магазины, <span class="text-style_colored">которые продают</span></h2>
-    <div class="advantages-panel agent_no-mobile">
-      <div class="advantages-panel__item">
-        <p class="advantages-panel__item__number">01</p>
-        <p class="advantages-panel__item__title">Удобный интерфейс</p>
-        <div class="advantages-panel__item__stick"></div>
-        <p class="advantages-panel__item__descriprtion">Блоковая подача информации,
-          удобные кнопки, карточки товаров,
-          понятное меню и легкая навигация
-          по многостраничному сайту.</p>
-      </div>
+<body id="body">
+  <!--ВЕРХНЯЯ ПАНЕЛЬ — кнопка меню - логотип - кнопка обратной связи -->
+  <!--НА хай размерах — кнопка меню  меню становится обычным меню nav - логотип переезжает в начало - кнопка обратной связи трансформируется и получает новую информацию -->
+  <header class="page-header">
+    <div class="page-header__dropdown dropdown agent__mobile">
+      <!-- <label>
+        <input type="checkbox" class="page-header__dropdown__button dropdown__button" id="dropdown1">
+        <div class="page-header__dropdown__button__visual">
+          <div class="page-header__dropdown__button__visual_rectangle1 rectangle"></div>
+          <div class="page-header__dropdown__button__visual_rectangle2 rectangle"></div>
+          <div class="page-header__dropdown__button__visual_rectangle3 rectangle"></div>
+        </div>
 
-      <div class="advantages-panel__item">
-        <p class="advantages-panel__item__number">02</p>
-        <p class="advantages-panel__item__title">Продающая структура</p>
-        <div class="advantages-panel__item__stick"></div>
-        <p class="advantages-panel__item__descriprtion">Делаем анализ вашей целевой
-          аудитории и вашего предложения. Опираясь на анализ прописываем продающую
-          структуру сайта.</p>
-      </div>
+        </label>-->        
+          <button class="page-header__dropdown__button dropdown__button" id="dropdown1">
+          <div class="page-header__dropdown__button__visual">
+            <div class="page-header__dropdown__button__visual_rectangle1 rectangle"></div>
+            <div class="page-header__dropdown__button__visual_rectangle2 rectangle"></div>
+            <div class="page-header__dropdown__button__visual_rectangle3 rectangle"></div>
+          </div> </button>
+        
 
-      <div class="advantages-panel__item">
-        <p class="advantages-panel__item__number">03</p>
-        <p class="advantages-panel__item__title">Адаптивность</p>
-        <div class="advantages-panel__item__stick"></div>
-        <p class="advantages-panel__item__descriprtion">Сайт корректно отображается на
-           различных устройствах, элементы динамически подстраиваются под различные
-            разрешения экрана, что повышает конверсию сайта в покупку.</p>
-      </div>
+         <!-- ~~~~~~~~~~~~ --> 
+        <div class="dropdown-menu-mobile popup-hidden">
+          <nav class="dropdown-menu-mobile__nav">
+            <ul class="dropdown-menu-mobile__nav__list">
+              <li class="dropdown-menu-mobile__nav__list__list-item"> <a class="ichy-block1-button2" href="#t1">Главная</a></li>
+              <li class="dropdown-menu-mobile__nav__list__list-item"><a class="ichy-block1-button2" href="#t2">Интернет-магазины, которые продают</a></li>
+              <li class="dropdown-menu-mobile__nav__list__list-item"><a class="ichy-block1-button2" href="#t3">Что вы получаете</a></li>
+              <li class="dropdown-menu-mobile__nav__list__list-item"><a class="ichy-block1-button2" href="#t4">Контакты</a></li>
+              <li class="dropdown-menu-mobile__nav__list__list-item"><a class="ichy-block1-button2" href="#t5">Исследуем бизнес</a></li>
+              <li class="dropdown-menu-mobile__nav__list__list-item"><a class="ichy-block1-button2" href="#t6">Этапы</a></li>
+              <li class="dropdown-menu-mobile__nav__list__list-item"><a class="ichy-block1-button2" href="#t7">Обратная связь</a></li>
+            </ul>
+          </nav>
+          <div class="dropdown-menu-mobile__info">
+            <p>info@millenium.ru</p>
+            <p>+7 (495) 792-66-69<br>пн-пт 10:00–19:00</p>
+          </div>         
+        </div>
+        <div class="dropdown-menu-mobile__background popup-hidden"></div>
+       <!-- </label> --> 
+    </div>
 
-      <div class="advantages-panel__item">
-        <p class="advantages-panel__item__number">04</p>
-        <p class="advantages-panel__item__title">Уникальный дизайн</p>
-        <div class="advantages-panel__item__stick"></div>
-        <p class="advantages-panel__item__descriprtion">Не пользуемся шаблонными решениями.
-           Под каждый проект разрабатывается индивидуальный дизайн который подчеркнет
-            имидж компании.</p>
-      </div>
+    <a class="page-header__logo image-link" href="#">
+      <img class="page-header__logo__image image-link__img" src="img/v_header-logo.svg" alt="Millenium">
+    </a>
 
-      <div class="advantages-panel__item">
-        <p class="advantages-panel__item__number">05</p>
-        <p class="advantages-panel__item__title">Защита и безопасность</p>
-        <div class="advantages-panel__item__stick"></div>
-        <p class="advantages-panel__item__descriprtion">Подключаем HTPS протокол,
-           защиту от DDOS атак, чтобы данные клиентов были в безопасности.</p>
-      </div>
+    <a class="page-header__call-link-mobile image-link agent__mobile cost-link" href="#">
+      <img class="page-header__call-link__agent-mobile image-link__img ichy-block1-button" src="img/v_header_btn-call.svg" alt="Обратная связь">
+      <!-- Отображается на мобилках и планшетах-->
+    </a>
 
-      <div class="advantages-panel__item">
-        <p class="advantages-panel__item__number">06</p>
-        <p class="advantages-panel__item__title">SEO оптимизация</p>
-        <div class="advantages-panel__item__stick"></div>
-        <p class="advantages-panel__item__descriprtion">Сайты соответствуют требованиям
-           поисковой оптимизации, они без труда покоряют топы поисковой выдачи
-            Яндекс и Google.</p>
+    <nav class="page-header__big-menu agent__tablepc">
+      <ul class="page-header__big-menu__list">
+        <li class="page-header__big-menu__list__item"> <a href="#t1">Главная</a> </li>
+        <li class="page-header__big-menu__list__item"> <a href="#t2">Цены</a> </li>
+        <li class="page-header__big-menu__list__item"><a href="#t6">Кейсы и отзывы</a> </li>
+        <li class="page-header__big-menu__list__item"> <a href="#t7">Контакты</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-header__big-info agent__tablepc">
+      <div class="page-header__big-info__block-contacts">
+        <a href="#" class="page-header__big-info__block-contacts__link-telegram"> <img src="img/v_telegram2.svg"
+            alt="telegram"></img> </a>
+
+        <a href="#" class="page-header__big-info__block-contacts__link-whatsapp"><img src="img/v_whatsapp2.svg"
+            alt="whatsapp">
+          </img> </a>
+        <p class="page-header__big-info__block-contacts__info">+ 7 (495) 555 65 65 <br> <span
+            class="page-header__big-info__block-contacts__info__primetime">Ежедневно с 09:00 до 18:00</span></p>
+      </div>
+      <a href="#" class="page-header__big-info__call-link cost-link link-btn">
+        <div class="page-header__big-info__call-link__visual-button link-btn__visual-button ichy-block1-button">Заказать звонок</div>
+      </a><!-- Отображается на ПК-->
+    </div>
+  </header>
+  <!-- Основной контент —  -->
+  <main class="main" id="t1">
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!--!!!!!!!!!!!!!!!!!! 1 Разработка интернет-магазинов на 1C-Битрикс !!!!!!!!!!!!!!!!!!!!!!!-->
+    <div class="block1 block">
+      <h1 class="main__h1">Разработка интернет-магазинов <br class="agent__notablet"><span class="text_colored-blue">на
+          1С-Битрикс</span></h1><br>
+    
+    
+      <img class="block1__img-container main__img-container" src="img/block1_1.png" alt="">
+      <div class="block1__content">
+        <div class="block1__text_style1"> Разработаем интернет-магазин за 30 дней с уникальным дизайном и продуманной
+          структурой который <span class="block1__text_style1_colored"> выделит вас на фоне
+            конкурентов</span>
+        </div>
+    
+        <a href="#" class="block1__button cost-link link-btn"> <!-- Кнопка, используется несколько раз в теле страницы, не маркируем стилями блока-->          
+          <div class="cost-link_visual link-btn__visual-button">Узнать стоимость</div>
+        </a>
+    
+        <div class="block1__text_style2-colored"><span class="text-style_colored">
+            Оставьте заявку и получите бесплатную консультацию от специалиста, полный расчет стоимости разработки и
+            бонус:</span><br>
+          «15 сервисов которые покажут стратегию продвижения конкурентов, всё об их выдаче в поиске и не только»</div>
       </div>
     </div>
-</div>
-
+     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!--!!!!!!!!!!!!!!!!!2 Мы создаем интернет-магазины, которые продают !!!!!!!!!!!!!!!!!!!!!!!-->
+    <div class="block2 block " id="t2">
+      <h2 class="block2__header text-style_h2">Мы создаём интернет-магазины, <span class="text-style_colored">которые
+          продают</span></h2>
+      <div class="block2__panel agent_no-mobile">
+        <div class="block2__panel__item">
+          <p class="block2__panel__item__number">01</p>
+          <p class="block2__panel__item__title">Удобный интерфейс</p>
+          <div class="block2__panel__item__stick"></div>
+          <p class="block2__panel__item__descriprtion">Блоковая подача информации,
+            удобные кнопки, карточки товаров,
+            понятное меню и легкая навигация
+            по многостраничному сайту.</p>
+        </div>
+    
+        <div class="block2__panel__item">
+          <p class="block2__panel__item__number">02</p>
+          <p class="block2__panel__item__title">Продающая структура</p>
+          <div class="block2__panel__item__stick"></div>
+          <p class="block2__panel__item__descriprtion">Делаем анализ вашей целевой
+            аудитории и вашего предложения. Опираясь на анализ прописываем продающую
+            структуру сайта.</p>
+        </div>
+    
+        <div class="block2__panel__item">
+          <p class="block2__panel__item__number">03</p>
+          <p class="block2__panel__item__title">Адаптивность</p>
+          <div class="block2__panel__item__stick"></div>
+          <p class="block2__panel__item__descriprtion">Сайт корректно отображается на
+            различных устройствах, элементы динамически подстраиваются под различные
+            разрешения экрана, что повышает конверсию сайта в покупку.</p>
+        </div>
+    
+        <div class="block2__panel__item">
+          <p class="block2__panel__item__number">04</p>
+          <p class="block2__panel__item__title">Уникальный дизайн</p>
+          <div class="block2__panel__item__stick"></div>
+          <p class="block2__panel__item__descriprtion">Не пользуемся шаблонными решениями.
+            Под каждый проект разрабатывается индивидуальный дизайн который подчеркнет
+            имидж компании.</p>
+        </div>
+    
+        <div class="block2__panel__item">
+          <p class="block2__panel__item__number">05</p>
+          <p class="block2__panel__item__title">Защита и безопасность</p>
+          <div class="block2__panel__item__stick"></div>
+          <p class="block2__panel__item__descriprtion">Подключаем HTPS протокол,
+            защиту от DDOS атак, чтобы данные клиентов были в безопасности.</p>
+        </div>
+    
+        <div class="block2__panel__item">
+          <p class="block2__panel__item__number">06</p>
+          <p class="block2__panel__item__title">SEO оптимизация</p>
+          <div class="block2__panel__item__stick"></div>
+          <p class="block2__panel__item__descriprtion">Сайты соответствуют требованиям
+            поисковой оптимизации, они без труда покоряют топы поисковой выдачи
+            Яндекс и Google.</p>
+        </div>
+      </div>
+    
     <!-- Swiper -->
-  <div class="swiper mySwiper agent_mobile">
-    <div class="swiper-wrapper">
-      <div class="advantages-panel__item swiper-slide">
-        <p class="advantages-panel__item__number">01</p>
-        <p class="advantages-panel__item__title">Удобный интерфейс</p>
-        <div class="advantages-panel__item__stick"></div>
-        <p class="advantages-panel__item__descriprtion">Блоковая подача информации,
-          удобные кнопки, карточки товаров,
-          понятное меню и легкая навигация
-          по многостраничному сайту.</p>
-      </div>
-
-      <div class="advantages-panel__item swiper-slide">
-        <p class="advantages-panel__item__number">02</p>
-        <p class="advantages-panel__item__title">Продающая структура</p>
-        <div class="advantages-panel__item__stick"></div>
-        <p class="advantages-panel__item__descriprtion">Делаем анализ вашей целевой
-          аудитории и вашего предложения. Опираясь на анализ прописываем продающую
-          структуру сайта.</p>
-      </div>
-
-      <div class="advantages-panel__item swiper-slide">
-        <p class="advantages-panel__item__number">03</p>
-        <p class="advantages-panel__item__title">Адаптивность</p>
-        <div class="advantages-panel__item__stick"></div>
-        <p class="advantages-panel__item__descriprtion">Сайт корректно отображается на
-           различных устройствах, элементы динамически подстраиваются под различные
+    <div class="swiper mySwiper agent_mobile block2__swiper">
+      <div class="swiper-wrapper">
+        <div class="block2__panel__item swiper-slide">
+          <p class="block2__panel__item__number">01</p>
+          <p class="block2__panel__item__title">Удобный интерфейс</p>
+          <div class="block2__panel__item__stick"></div>
+          <p class="block2__panel__item__descriprtion">Блоковая подача информации,
+            удобные кнопки, карточки товаров,
+            понятное меню и легкая навигация
+            по многостраничному сайту.</p>
+        </div>
+    
+        <div class="block2__panel__item swiper-slide">
+          <p class="block2__panel__item__number">02</p>
+          <p class="block2__panel__item__title">Продающая структура</p>
+          <div class="block2__panel__item__stick"></div>
+          <p class="block2__panel__item__descriprtion">Делаем анализ вашей целевой
+            аудитории и вашего предложения. Опираясь на анализ прописываем продающую
+            структуру сайта.</p>
+        </div>
+    
+        <div class="block2__panel__item swiper-slide">
+          <p class="block2__panel__item__number">03</p>
+          <p class="block2__panel__item__title">Адаптивность</p>
+          <div class="block2__panel__item__stick"></div>
+          <p class="block2__panel__item__descriprtion">Сайт корректно отображается на
+            различных устройствах, элементы динамически подстраиваются под различные
             разрешения экрана, что повышает конверсию сайта в покупку.</p>
-      </div>
-
-      <div class="advantages-panel__item swiper-slide">
-        <p class="advantages-panel__item__number">04</p>
-        <p class="advantages-panel__item__title">Уникальный дизайн</p>
-        <div class="advantages-panel__item__stick"></div>
-        <p class="advantages-panel__item__descriprtion">Не пользуемся шаблонными решениями.
-           Под каждый проект разрабатывается индивидуальный дизайн который подчеркнет
+        </div>
+    
+        <div class="block2__panel__item swiper-slide">
+          <p class="block2__panel__item__number">04</p>
+          <p class="block2__panel__item__title">Уникальный дизайн</p>
+          <div class="block2__panel__item__stick"></div>
+          <p class="block2__panel__item__descriprtion">Не пользуемся шаблонными решениями.
+            Под каждый проект разрабатывается индивидуальный дизайн который подчеркнет
             имидж компании.</p>
-      </div>
-
-      <div class="advantages-panel__item swiper-slide">
-        <p class="advantages-panel__item__number">05</p>
-        <p class="advantages-panel__item__title">Защита и безопасность</p>
-        <div class="advantages-panel__item__stick"></div>
-        <p class="advantages-panel__item__descriprtion">Подключаем HTPS протокол,
-           защиту от DDOS атак, чтобы данные клиентов были в безопасности.</p>
-      </div>
-
-      <div class="advantages-panel__item swiper-slide">
-        <p class="advantages-panel__item__number">06</p>
-        <p class="advantages-panel__item__title">SEO оптимизация</p>
-        <div class="advantages-panel__item__stick"></div>
-        <p class="advantages-panel__item__descriprtion">Сайты соответствуют требованиям
-           поисковой оптимизации, они без труда покоряют топы поисковой выдачи
+        </div>
+    
+        <div class="block2__panel__item swiper-slide">
+          <p class="block2__panel__item__number">05</p>
+          <p class="block2__panel__item__title">Защита и безопасность</p>
+          <div class="block2__panel__item__stick"></div>
+          <p class="block2__panel__item__descriprtion">Подключаем HTPS протокол,
+            защиту от DDOS атак, чтобы данные клиентов были в безопасности.</p>
+        </div>
+    
+        <div class="block2__panel__item swiper-slide">
+          <p class="block2__panel__item__number">06</p>
+          <p class="block2__panel__item__title">SEO оптимизация</p>
+          <div class="block2__panel__item__stick"></div>
+          <p class="block2__panel__item__descriprtion">Сайты соответствуют требованиям
+            поисковой оптимизации, они без труда покоряют топы поисковой выдачи
             Яндекс и Google.</p>
-      </div>      
+        </div>
+      </div>
+      <!--<div class="swiper-pagination"></div>   -->
     </div>
-    <!--<div class="swiper-pagination"></div>   -->
-  </div>
-  <div class="swiper-pagination agent_mobile"></div>
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-  </script>
-
-    <label class="advantages-button agent_no-mobile">
+    <div class="swiper-pagination agent_mobile"></div>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+    
+    <label class="block2__button agent_no-mobile">
       <div class="img_arrow">
         <div class="img_arrow_left"></div>
         <div class="img_arrow_right"></div>
       </div>
-      <input type="checkbox" class="advantages-button__checkbox">    
+      <input type="checkbox" class="block2__button__checkbox">
     </label>
 
-    <a href="#" class="main__cost-link link-btn">
-      <div class="main__cost-link_visual-button link-btn__visual-button ">Узнать стоимость</div>
+    <a href="#" class="block2__button cost-link link-btn"> <!-- Кнопка, используется несколько раз в теле страницы, не маркируем стилями блока-->          
+      <div class="cost-link_visual link-btn__visual-button">Узнать стоимость</div>
     </a>
+       
+    </div>
+  </div>
+
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!--!!!!!!!!!!!!!!!!!!!!!!!!!!  3 Что вы получаете ? !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+  <div class="block3 block" id="t3">
+    <h2 class="text-style_h2">Что вы <span class="text-style_colored">получаете ?</span></h2>
+  
+    <div class="block3__main">
+  
+      <div class="block3__main__item">
+        <img class="block3__main__item__image" src="img/block3_1.png" alt="">
+        <div class="block3__main__item__info-block">
+          <h3>Каталог товаров</h3>
+          <ul>
+            <li>возможность выгружать свои товары в неограниченном количестве</li>
+            <li>добавлять и редактировать описание товаров</li>
+            <li>сортировать товары по заданным критериям</li>
+            <li>моментальная оплата товара или оформление при помощи добавления корзины</li>
+          </ul>
+        </div>
+      </div>
+  
+      <div class="block3__main__item">
+        <div class="block3__main__item__info-block ">
+          <h3>Оформление заказа</h3>
+          <ul>
+            <li>личный кабинет</li>
+            <li>корзина с отображением выбранных товаров</li>
+            <li>оформление заказа с указанием контактных данных</li>
+            <li>возможность приема онлайн-платежей</li>
+            <li>использование купонов, скидок и специальных предложений</li>
+          </ul>
+        </div>
+        <img class="block3__main__item__image" src="img/block3_2.png" alt="">
+      </div>
+  
+      <div class="block3__main__item">
+        <img class="block3__main__item__image" src="img/block3_1.png" alt="">
+        <div class="block3__main__item__info-block">
+          <h3>Интеграции</h3>
+          <ul>
+            <li>1С, Мой склад (выгрузка товаров на сайт, полная синхронизация)</li>
+            <li>Маркетплейсы (Яндекс.Маркет, Wildberries, Goods, Ozon)</li>
+            <li>Интеграция со службами доставки СДЭК, Почта России</li>
+          </ul>
+        </div>
+      </div>
+      <div class="block3__main__item">
+        <div class="block3__main__item__info-block ">
+          <h3>CRM</h3>
+          <ul>
+            <li>фиксация и отслеживание поступивших заявок</li>
+            <li>уведомления о заказах</li>
+            <li>отчетность магазина</li>
+          </ul>
+        </div>
+        <img class="block3__main__item__image" src="img/block3_4.png" alt="">  
+      </div>
+    </div>
+
+
+    <a href="#" class="cost-link link-btn">
+      <div class="block3__btn cost-link_visual link-btn__visual-button ">Узнать стоимость</div>
+    </a>
+
+  </div>
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 4 Сертификаты ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <div class="block4 block" id="t4">
+    <div class="block4__whiteline">
+    <div class="block4__main">
+      <img class="block4__main__img" src="img/block4_corona.png" alt="">
+
+      <div class="block4__pc__container agent__pc">
+
+        <div class="block4__swiper__container">
+          <div class="block4__swiper__container__text1">Сертификат</div>
+          <p class="block4__swiper__container__text2">Золотой сертифицированный партнёр битрикс</p>
+          <img class="block4__swiper__img" src="img/block4_1.png" alt="Золотой сертифицированный партнёр битрикс">
+        </div>
+
+        <div class="block4__swiper__container">
+          <div class="block4__swiper__container__text1">Сертификат</div>
+          <p class="block4__swiper__container__text2">Прграммы мониторинга качества внедрений</p>
+          <img class="block4__swiper__img" src="img/block4_2.png" alt="Программы мониторинга качества внедрений">
+        </div>
+
+      </div>
+
+      <div class="swiper mySwiper block4__swiper agent__nopc">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide block4__swiper__container">
+            <div class="block4__swiper__container__text1">Сертификат</div>
+            <p class="block4__swiper__container__text2">Золотой сертифицированный партнёр битрикс</p>
+            <img class="block4__swiper__img" src="img/block4_1.png" alt="Золотой сертифицированный партнёр битрикс">
+          </div>
+          <div class="swiper-slide block4__swiper__container">
+            <div class="block4__swiper__container__text1">Сертификат</div>
+            <p class="block4__swiper__container__text2">Прграммы мониторинга качества внедрений</p>
+            <img class="block4__swiper__img" src="img/block4_2.png" alt="Программы мониторинга качества внедрений">
+          </div>
+        </div>
+        <div class="block4__pagination swiper-pagination"></div>
+      </div>
+      
+      <script class="agent__nopc" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
+    <!-- Initialize Swiper -->
+    <script class="agent__nopc">
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+        <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 5 Исследуем бизнес ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <div class="block5 block" id="t5">
+     <div class="block5__text">
+      <h2 class="text-style_h2 block5__text__header">Исследуем <span class="text-style_colored">бизнес</span></h2>
+      <p>Каждый клиент – своя история. Мы не берем шаблонные решения, а исследуем рынок конкретно под ваши цели и задачи.</p> <br> 
+      <p>Сделать интернет-магазин с нуля непросто. Нужен сайт с качественной разработкой дизайна, который не будет отвлекать
+         от сути, наполнением и рабочими модулями. Кроме этого, для успешного запуска электронной торговой площадки владельцу
+          бизнеса требуется найти поставщиков, выбрать товарные позиции, просчитать рентабельность, уладить другие организационные
+           вопросы вне сети.</p> <br> 
+      <p> Создание интернет-магазина лучше делегировать на профессионалов. Мы возьмем на себя вопросы по разработке интернет-магазина
+         под ключ. Специалисты компании предоставляют заказчику готовый продающий сайт. Он уже наполнен контентом, ориентирован
+          на конечного потребителя и интуитивно понятен для заказчика.</p> 
+     </div>
+     <img class="block5__img" src="img/block5_1.png" alt="">
+  </div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 6 Этапы  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <div class="block6 block" id="t6">
+    <h2 class="text-style_h2">Этапы</h2>
+    <div class="block6__list">
+      <div class="block6__list__header">
+        <div class="block6__list__header__number">1</div>
+        <h3 class="text-style_h3">Маркетинговый анализ бизнеса</h3>
+      </div>
+      <div class="block6__list__textbox">
+        <p>На предварительном этапе мы выясняем специфику вашего бизнеса, товаров. Отмечаем ваши преимущества и уникальные
+           предложения, изучаем ожидания и потребности целевой аудитории, рассматриваем ближайшее конкурентное окружение.</p> <br>
+        <p> На основании полученных данных мы разрабатываем прототип интернет-магазина, пишем техническое ТЗ для специалистов,
+           готовим рекомендации по текстовому наполнению с учетом требований SEO, разрабатываем план по внешней и внутренней
+            оптимизации сайта. Также мы создаем набор готовых элементов для пользовательского интерфейса.</p>
+      </div>
+      <img src="img/block6_1.png" alt="" class="block6__list__image">
+    </div>
+
+    <div class="block6__list">
+      <div class="block6__list__header">
+        <div class="block6__list__header__number">2</div>
+        <h3 class="text-style_h3">Привлекательный дизайн</h3>
+      </div>
+      <div class="block6__list__textbox">
+        <p>Интерфейс сайта будет соответствовать современным требованиям и отвечать ожиданиям целевой аудитории.
+           Опытные специалисты Millenium создадут UX-дизайн, отталкиваясь от данных анализа пользовательского
+            поведения, что позволит в несколько раз увеличить конверсию.</p> <br>
+        <p>Мы подберем оптимальные цветовые сочетания (основной, дополнительные, акцентные цвета), уделим
+           внимание четкости графики, наглядности интерфейса, понятной и лаконичной визуализации.</p>
+      </div>
+      <img src="img/block6_2.jpg" alt="" class="block6__list__image">
+    </div>
+
+    <div class="block6__list">
+      <div class="block6__list__header">
+        <div class="block6__list__header__number">3</div>
+        <h3 class="text-style_h3">Профессиональная верстка</h3>
+      </div>
+      <div class="block6__list__textbox">
+        <p>Мы производим верстку по стандарту Pixel Perfect, который предполагает точное соответствие сверстанных
+           страниц дизайн-макету. Наши специалисты напишут чистый код с двухфакторной проверкой, позволяющий
+            обеспечить высокую скорость загрузки на любых браузерах и электронных устройствах (десктопных и
+             мобильных).</p> <br>
+        <p>Профессиональная адаптивная верстка является важным условием бесперебойной надежной работы сайта
+           на протяжении длительного времени.</p>
+      </div>
+      <img src="img/block6_3.jpg" alt="" class="block6__list__image">
+    </div>
+
+    <div class="block6__list">
+      <div class="block6__list__header">
+        <div class="block6__list__header__number">4</div>
+        <h3 class="text-style_h3">«Посадка» на CMS</h3>
+      </div>
+      <div class="block6__list__textbox">
+        <p>Невозможно представить интернет-магазин без системы управления сайтом. Специалисты Millenium выполнят
+           посадку готовой верстки вашего магазина на CMS №1 в странах СНГ - 1с Битрикс.</p> <br>
+        <p>Благодаря CMS, вы просто заходите в административную панель, и, при помощи понятных полей, легко
+           управляете содержимым — редактируете новости, вносите коррективы в товары, добавляет фото и
+            видеоконтент, модерируете и выполняете множество других действий, которые без CMS были бы сущим кошмаром.</p>
+      </div>
+      <img src="img/block6_4.png" alt="" class="block6__list__image">
+    </div>
+
+    <div class="block6__list">
+      <div class="block6__list__header">
+        <div class="block6__list__header__number">5</div>
+        <h3 class="text-style_h3">Тестирование и доработка</h3>
+      </div>
+      <div class="block6__list__textbox">
+        <p>Чтобы избежать проблем во время использования сайта, на данном этапе мы отрабатываем все возможные сценарии взаимодействия
+           пользователей с сайтом. Это позволяет вовремя выявить ошибки и устранить их. Мы тестируем usability и безопасность сайта, 
+           проверяем скорость загрузки страниц, работу форм обратной связи и интерактивных элементов, отображение страниц на разных
+            устройствах. Это позволяет на 100% гарантировать функциональность ресурса.</p>
+      </div>     
+    </div>
+
+    <div class="block6__list">
+      <div class="block6__list__header">
+        <div class="block6__list__header__number">6</div>
+        <h3 class="text-style_h3">Запуск сайта</h3>
+      </div>
+      <div class="block6__list__textbox">
+        <p>Когда все проверено и выполнены все нужные доработки, остается лишь выполнить грамотный запуск сайта. Наши
+           специалисты сверяют всё по чек-листу, чтобы избежать неприятностей и получить на выходе идеальный интернет-магазин
+            с высокой конверсией. Сайт от профессионалов Millenium позволит вам легко привлекать новых клиентов и
+             станет достойным лицом вашей компании в интернете.</p>
+      </div>     
+    </div>
+  </div>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+    <!-- 7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  7  ~~~~-->
+    <img class="block7 block" src="img/block7_1.jpg" alt="Мужики со скучными лицами. Им не дают денег.">
+
+     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Заказ звонка (обратная связь)~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+      <!-- 8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   -->
+    <div class="block8 block" id="t7">
+      <h2 class="text-style_h2 block8__header">Компания Millenium —</h2>
+      <div class="block8__text">
+        <p>Это дорогая и долгая разработка интернет-магазинов на 1С Битрикс! Нельзя сделать качественный цифровой продукт за
+           дешево и быстро!</p> <br>
+        <p>Мы создадим интернет-магазин с нуля. Заказчику не придется искать других IT-специалистов для дальнейшей настройки
+           и запуска сайта. Мы настроим сервисы, интегрируем модули для онлайн-торговли, добавим контент и товары. Работы
+            по созданию интернет-магазина с нуля ведутся только после анализа ниши бизнеса.</p>
+      </div>
+      <form class="block8__form">
+        
+          <p class="block8__form__text1">Звоните нам по  телефону<br>+7 (495) 792-66-69</p>  
+          <p  class="block8__form__text2">или закажите обратный звонок чтобы получить ответы <br> на все интересующие вас вопросы.</p>
+       
+       
+
+        <input class="block8_form__input" type="text" id="name" name="u_name" placeholder="Введите ваше имя">
+        
+        <input class="block8_form__input" type="tel" id="phone" name="u_phone" placeholder="+ 7 (999) 999 99 99">
+
+        <label class="block8__form__submit">
+          <input class="block8__form__submit__button" type="submit" >
+          Перезвоните мне
+        </label>
+
+        <label class="block8_form__agree" >
+          <input class="block8_form__agree__checkbox" type="checkbox">
+          <span class="block8_form__agree__custom-checkbox"></span>
+          <p class="block8_form__agree__text">Cогласен/а на <a src="#" class="text-style_link-b8">обработку персональных данных</a></p>
+        </label>
+      </form>
+
+      <div class="block8__img block8__img_1"></div>
+      <div class="block8__img block8__img_2"></div>
+      <div class="block8__img block8__img_3"></div>
+      <div class="block8__img block8__img_4"></div>
+      <div class="block8__img block8__img_5"></div>
+    </div>
+     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
   </main>
-  <script src="main-src.js"></script>  
+       <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+     <!-- ~~~  Подвал сайта  ~~~~~~~  Подвал сайта  ~~~~~~~  Подвал сайта  ~~~~~~~  Подвал сайта  ~~~~-->
+     <footer class="footer">
+      <span class="footer__text1 text-style_colored-white">Напишите Нам</span>
+      <span class="footer__text2 text-style_colored">info@millenium.ru</span>
+
+      <a href="#" class="footer__btn link-btn">
+        <div class="footer__btn__visual">Заказать звонок</div>
+      </a><!-- Отображается на ПК-->
+      <!--    <div class="footer__btn">Заказать звонок</div>  -->
+
+
+      <div class="footer__line"></div>
+      <span class="footer__text3 text-style_colored-white">Москва, ул. Профсоюзная 76, БЦ «ГАЛЕРЕЯ 76» 2 этаж</span>
+      <div class="footer__links">
+
+
+
+        
+
+        <a href="#" class="footer__links__icon">
+          <img src="img/v_footer_icon-telegram.png" alt="telegram">
+        </a>
+        <a href="#" class="footer__links__icon">
+          <img src="img/v_footer_icon-whatsapp.png" alt="whatsapp">
+        </a>
+      </div>
+      <span class="footer__text4 text-style_colored-white">+7 (495) 792-66-69 пн-пт 10:00–19:00</span>
+
+
+      <a class="footer__logo image-link" href="#">
+        <img class="image-link__img" src="img/v_footer-logo.png" alt="Millenium">
+      </a>
+
+      <span class="footer__text5 text-style_colored-white">© 2018–2021 | Millenium - создание интернет-магазинов на 1С Битрикс</span>
+      <a class="footer__text6 text-style_colored-white">Политика конфиденциальности</a>
+     </footer>
+
+
+
+     <button class="popup_background ">
+      <div class="popup-background_visual popup-hidden" ></div></button>
+
+     <form class="popup-call popup-hidden">
+      <span class="popup-call__header">Заявка на консультацию</span>
+
+      <label class="popup-call__input">
+        <span class="popup-call__input-text">Ваше имя</span>
+        <input type="textbox" class="popup-call__textbox" placeholder="Введите Ваше Имя">
+      </label>
+      <label class="popup-call__input">
+        <span class="popup-call__input-text">Номер телефона</span>
+        <input type="textbox" class="popup-call__textbox" placeholder="+7 (999) 999 99 99">
+      </label>
+      <label>
+        <div class="cost-link_visual link-btn__visual-button popup-call__input-submit-visual">Отправить</div>
+        <input type="submit" class="popup-call__input-submit">
+      </label>
+      <p class="popup-call__text-agree">Нажимая на кнопку «Отправить заявку», я даю согласие на обработку персональных данных и соглашаюсь c политикой конфиденциальности</p>
+
+      <div class="popup-call__something">
+        <img  class="popup-call__something__img" src="img/popup-something1.png" alt="">
+
+        <div class="popup-call__something__lock">
+          <div class="popup-call__something__lock__in">
+            <img class="popup-call__something__lock__im__img" src="img/popup_closed_lock.png" alt="">
+          </div>
+        </div>
+      </div>
+      
+
+
+
+
+
+     </form> 
+     <script src="main-src.js"></script> 
 </body>
+
 </html>
