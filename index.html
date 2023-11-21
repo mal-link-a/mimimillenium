@@ -59,7 +59,11 @@
           <div class="dropdown-menu-mobile__info">
             <p>info@millenium.ru</p>
             <p>+7 (495) 792-66-69<br>пн-пт 10:00–19:00</p>
-          </div>         
+          </div> 
+          <button class="dropdown-menu-mobile__exit-btn-x popup-exit-btn">
+            <div class="popup-exit-btn__container">             
+            <img class="popup-exit-btn__container_visual" src="img/v_popup-x.svg"></div>
+          </button>        
         </div>
         <div class="dropdown-menu-mobile__background popup-hidden"></div>
        <!-- </label> --> 
@@ -69,10 +73,10 @@
       <img class="page-header__logo__image image-link__img" src="img/v_header-logo.svg" alt="Millenium">
     </a>
 
-    <a class="page-header__call-link-mobile image-link agent__mobile cost-link" href="#">
-      <img class="page-header__call-link__agent-mobile image-link__img ichy-block1-button" src="img/v_header_btn-call.svg" alt="Обратная связь">
+    <button class="page-header__call-link-mobile image-link agent__mobile cost-link link-btn__visual-button ichy-block1-button">
+      <img class="page-header__call-link__agent-mobile image-link__img " src="img/v_header_btn-call.png" alt="Обратная связь">
       <!-- Отображается на мобилках и планшетах-->
-    </a>
+    </button>
 
     <nav class="page-header__big-menu agent__tablepc">
       <ul class="page-header__big-menu__list">
@@ -94,9 +98,9 @@
         <p class="page-header__big-info__block-contacts__info">+ 7 (495) 555 65 65 <br> <span
             class="page-header__big-info__block-contacts__info__primetime">Ежедневно с 09:00 до 18:00</span></p>
       </div>
-      <a href="#" class="page-header__big-info__call-link cost-link link-btn">
-        <div class="page-header__big-info__call-link__visual-button link-btn__visual-button ichy-block1-button">Заказать звонок</div>
-      </a><!-- Отображается на ПК-->
+      <button class="page-header__big-info__call-link cost-link link-btn link-btn__visual-button ichy-block1-button">
+        Заказать звонок
+      </button><!-- Отображается на ПК-->
     </div>
   </header>
   <!-- Основной контент —  -->
@@ -104,14 +108,14 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
      <!--!!!!!!!!!!!!!!!!!! 1 Разработка интернет-магазинов на 1C-Битрикс !!!!!!!!!!!!!!!!!!!!!!!-->
     <div class="block1 block">
-      <h1 class="main__h1">Разработка интернет-магазинов <br class="agent__notablet"><span class="text_colored-blue">на
+      <h1 class="main__h1">Разработка интернет-магазинов <br class="agent__notablet"><span class="text-style_colored">на
           1С-Битрикс</span></h1><br>
     
     
       <img class="block1__img-container main__img-container" src="img/block1_1.png" alt="">
       <div class="block1__content">
         <div class="block1__text_style1"> Разработаем интернет-магазин за 30 дней с уникальным дизайном и продуманной
-          структурой который <span class="block1__text_style1_colored"> выделит вас на фоне
+          структурой который <span class="text-style_colored"> выделит вас на фоне
             конкурентов</span>
         </div>
     
@@ -333,7 +337,7 @@
 
 
     <a href="#" class="cost-link link-btn">
-      <div class="block3__btn cost-link_visual link-btn__visual-button ">Узнать стоимость</div>
+      <div class="block3__btn cost-link_visual link-btn__visual-button">Узнать стоимость</div>
     </a>
 
   </div>
@@ -522,8 +526,7 @@
        
        
 
-        <input class="block8_form__input" type="text" id="name" name="u_name" placeholder="Введите ваше имя">
-        
+        <input class="block8_form__input" type="text" id="name" name="u_name" placeholder="Введите ваше имя">        
         <input class="block8_form__input" type="tel" id="phone" name="u_phone" placeholder="+ 7 (999) 999 99 99">
 
         <label class="block8__form__submit">
@@ -553,9 +556,9 @@
       <span class="footer__text1 text-style_colored-white">Напишите Нам</span>
       <span class="footer__text2 text-style_colored">info@millenium.ru</span>
 
-      <a href="#" class="footer__btn link-btn">
-        <div class="footer__btn__visual">Заказать звонок</div>
-      </a><!-- Отображается на ПК-->
+      <button class="footer__btn link-btn">
+        <div class="footer__btn__visual link-btn__visual-button">Заказать звонок</div>
+      </button><!-- Отображается на ПК-->
       <!--    <div class="footer__btn">Заказать звонок</div>  -->
 
 
@@ -582,12 +585,12 @@
       </a>
 
       <span class="footer__text5 text-style_colored-white">© 2018–2021 | Millenium - создание интернет-магазинов на 1С Битрикс</span>
-      <a class="footer__text6 text-style_colored-white">Политика конфиденциальности</a>
+      <a href="#" class="footer__text6 text-style_colored-white">Политика конфиденциальности</a>
      </footer>
 
 
 
-     <button class="popup_background ">
+     <button class="popup-background">
       <div class="popup-background_visual popup-hidden" ></div></button>
 
      <form class="popup-call popup-hidden">
@@ -595,11 +598,11 @@
 
       <label class="popup-call__input">
         <span class="popup-call__input-text">Ваше имя</span>
-        <input type="textbox" class="popup-call__textbox" placeholder="Введите Ваше Имя">
+        <input type="text" class="popup-call__textbox" placeholder="Введите Ваше Имя">
       </label>
       <label class="popup-call__input">
         <span class="popup-call__input-text">Номер телефона</span>
-        <input type="textbox" class="popup-call__textbox" placeholder="+7 (999) 999 99 99">
+        <input type="tel" class="popup-call__textbox" placeholder="+7 (999) 999 99 99">
       </label>
       <label>
         <div class="cost-link_visual link-btn__visual-button popup-call__input-submit-visual">Отправить</div>
@@ -614,8 +617,12 @@
           <div class="popup-call__something__lock__in">
             <img class="popup-call__something__lock__im__img" src="img/popup_closed_lock.png" alt="">
           </div>
-        </div>
+        </div>        
       </div>
+      <button class="popup-call__exit-btn-x popup-exit-btn">
+        <div class="popup-call__exit-btn-x__container popup-exit-btn__container">             
+        <img class="popup-call__exit-btn-x__container_visual popup-exit-btn__container_visual" src="img/v_popup-x.svg"></div>
+      </button> 
       
 
 

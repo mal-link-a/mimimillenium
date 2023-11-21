@@ -1,5 +1,22 @@
 @font-face {
-  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-family: 'Montserrat';
+  src: url(./fonts/Montserrat/Montserrat-Regular.ttf)
+}
+@font-face {
+  font-weight: 500;
+  font-family: 'Montserrat';
+  src: url(./fonts/Montserrat/Montserrat-Medium.ttf)
+}
+@font-face {
+  font-weight: 700;
+  font-family: 'Montserrat';
+  src: url(./fonts/Montserrat/Montserrat-Bold.ttf)
+}
+@font-face {
+  font-weight: 800;
+  font-family: 'Montserrat';
+  src: url(./fonts/Montserrat/Montserrat-ExtraBold.ttf)
 }
 
 /*Переопределяем расчёт размеров у боксов с надеждой, что это нам когда-нибудь поможет*/
@@ -27,6 +44,16 @@ body {
   align-items: center;
   grid-template-columns: 1fr 4fr 1fr;
   margin: 10px;
+}
+.page-header__call-link-mobile {
+  width:62px;
+  height: 38px;
+  border-radius: 5px;
+  background-color: #6B5AF9;  
+}
+.page-header__call-link__agent-mobile {
+  width:20px;
+  height: 20px;
 }
 
 
@@ -90,6 +117,7 @@ body {
     font-size: 18px;
   }
 }
+
 
 /* Блок 1 телефоны ~~~~~~~~ Блок 1 телефоны ~~~~~~~~ Блок 1 телефоны ~~~~~~~~ Блок 1 телефоны ~~~~~~~~  */
 @media all and (max-width: 760px) {
@@ -159,7 +187,6 @@ body {
     display: none;
   }
 
-  
 
   .page-header {
     margin-right: 32px;
@@ -170,7 +197,7 @@ body {
     margin: 0px;
     padding: 0px;
     display: grid;
-    grid-template-columns: 1fr min(70vw, 960px);
+    grid-template-columns: 1fr min(60vw, 960px);
     grid-template-rows: 100px 1fr;
     grid-template-areas: "h1 image""content image";
     justify-items: center;
@@ -190,7 +217,7 @@ body {
 
   .block1__img-container {
     grid-area: image;
-    width: min(70vw, 960px);
+    width: min(60vw, 960px);
     margin-top: 5px;
     margin-bottom: 0;
   }
@@ -249,7 +276,7 @@ body {
 /* Блок 1 компьютеры  ~~~~~~~~ Блок 1 компьютеры ~~~~~~~~ Блок 1 компьютеры ~~~~~~~~ Блок 1 компьютеры ~~~~~~~~  */
 @media all and (min-width: 1200px) {
   .agent__mobile {
-    display: none;
+    display: none !important;
   }
   .block1{
     margin-bottom: 154px;
@@ -317,18 +344,28 @@ body {
 
   .page-header__big-info__block-contacts__info__primetime {
     font-size: 12px;
+  }  
+
+  .page-header__big-info__call-link {
+    width: 177px;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6B5AF9;
+    margin: auto;
+    margin-left: 20px;
+    color: white;
   }
 
-  .page-header__big-info__call-link {}
 
-  .page-header__big-info__call-link__visual-button {
+  /*.page-header__big-info__call-link__visual-button {
     margin: auto;
     margin-left: 20px;
     width: 177px;
     height: 60px;
     border-radius: 5px;
     color: white;
-  }
+  }*/
   /* ............1........1................1.................1.................1.............1.................1...........1....... .....1.........1...*/
   /* ........................................................................................................................ .........................*/
   .block1 {
@@ -403,26 +440,61 @@ body {
   position: absolute;
   left: 0px;
   top: 62px;
-  z-index: 3;
+  z-index: 300;
+  visibility: visible;  
+  opacity: 1;
+  transition: 
+  opacity 0.5s,
+  visibility 0.5s  ;
 }
+.popup-exit-btn {
+  position: absolute;
+  visibility: hidden; 
+  cursor: pointer;
+}
+.popup-exit-btn__container {
+  width: 50px;
+  height: 50px;
+  visibility: visible;  
+}
+.popup-exit-btn__container_visual{
+  width: 13px;
+  height: 13px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
 @media (max-width: 768px) {
   .dropdown-menu-mobile{
-    width: 100vw;
+    width: 100%;
+  }
+  .dropdown-menu-mobile__exit-btn-x{
+    right: 10px;  
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
   .dropdown-menu-mobile{    
     width: 360px;
   }
+  .dropdown-menu-mobile__exit-btn-x{
+    left: 10px;    
+  }
 }
 .dropdown-menu-mobile__background {
   position: absolute;  
-  width: 100vw;
+  width: 100%;
   height: calc(100vh - 62px);
   background: rgba(163, 161, 161, 0.85);
   backdrop-filter: blur(2px);
   z-index: 2;
   top: 62px;
+  opacity: 1;
+  visibility: visible;
+  transition: 
+  opacity 0.5s,
+  visibility 0.5s  ;
 }
 
 .page-header__dropdown__button__visual_rectangle3 {
@@ -438,8 +510,7 @@ body {
 }
 
 .dropdown-menu-mobile__nav__list__list-item {
-  color: #2A2367;
-  font-size: 14px;
+   font-size: 14px;
   font-weight: 700;
   padding-top: 28px;
 }
@@ -447,6 +518,7 @@ body {
 .dropdown-menu-mobile__nav__list__list-item a {
   opacity: 1;
   text-decoration: none;
+  color: #2A2367;
 }
 
 .dropdown-menu-mobile__nav__list__list-item a:hover {
@@ -483,17 +555,22 @@ body {
 
 .rectangle {
   border-radius: 1px;
-  background: var(--2, #6B5AF9);
+  background: #6B5AF9;
+}
+.page-header__dropdown__button__visual:hover .rectangle {
+  background-color:#6F19E3;
 }
 
 .page-header__dropdown__button__visual_rectangle1 {
   width: 41px;
   height: 4px;
+  transition: background-color 0.5s;
 }
 
 .page-header__dropdown__button__visual_rectangle2 {
   width: 27px;
   height: 4px;
+  transition: background-color 0.5s;
 }
 
 .page-header__dropdown__button__visual_rectangle3 {
@@ -501,6 +578,11 @@ body {
   width: 15px;
   height: 4px;
   transition: width 0.6s, background-color 0.5s;
+}
+.page-header__dropdown__button__visual_rectangle3_active
+{
+  width:41px;
+  background-color: #43CD93;
 }
 
 /*............................................................................................ */
@@ -576,7 +658,8 @@ body {
 
 .img_arrow {
   position: relative;
-  margin: 0 50%;
+  left: -4px;
+  margin: 0 49%;
   margin-top: 28px;
   margin-bottom: 16px;
   width: 36px;
@@ -595,8 +678,8 @@ body {
 
 .img_arrow_left {
   position: absolute;
-  left: 0px;
-  top: -3px;
+  left: 14px;
+  top: 14px;
   width: 11px;
   height: 3px;
   background-color: #6B5AF9;
@@ -606,18 +689,22 @@ body {
 
 .img_arrow_right {
   position: absolute;
-  left: -6px;
-  top: -3px;
+  left: 8px;
+  top: 14px;
   width: 11px;
   height: 3px;
   background-color: #6B5AF9;
   border-radius: 3px;
   transform: rotate(45deg);
 }
+.block2__button {
+  cursor: pointer;
+}
 
 .block2__button__checkbox {
   position: absolute;
   appearance: none;
+  
 }
 
 /* для телефонов*/
@@ -763,6 +850,9 @@ body {
   .block3__main__item__info-block {
     align-self: flex-start;
     order: 1;
+  }
+  .block3__main__item__image {
+    width: 90vw;
   }
 }
 
@@ -952,11 +1042,11 @@ body {
   }
 
   .block5__img {
-    min-width: min(75vw, 940px);
+    width: 60vw;
     height: auto;
     padding-top: 20px;
     position: absolute;
-    left: min(25vw, 350px);
+    left: min(60vw, 360px);
   }
 }
 
@@ -1127,7 +1217,7 @@ body {
 /* ~ Блок 7. Картинка на всю ширину. Фоновая */
 .block7 {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   max-width: 1920px;
   left: 0;
   right: 0;
@@ -1143,6 +1233,8 @@ body {
   /* Для пк */
   display: grid;
   position: relative;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .block8__header {
@@ -1152,6 +1244,8 @@ body {
 
 .block8__text {
   grid-area: f_text;
+  padding-left:5px;
+  padding-right:5px; 
 }
 
 .block8__form {
@@ -1194,6 +1288,7 @@ body {
   width: 100%;
   padding: 0;
   font-size: 18px;
+  color: white;
 }
 
 .block8__form input::placeholder {
@@ -1201,19 +1296,26 @@ body {
 }
 
 .block8__form__submit {
-
   height: 60px;
-  background: #FFF;
+  background-color: #FFF;
   color: #6B5AF9;
   text-align: center;
   line-height: 60px;
   padding: 0;
   width: 100%;
+  transition:
+   background-color 0.6s,
+   color 0.6s;
+}
+.block8__form__submit:hover {
+  background-color: #2A2367;
+  color:#D1CCFF;
 }
 
 .block8__form__submit__button {
   position: absolute;
   visibility: hidden;
+  
 }
 
 .block8_form__agree {
@@ -1221,28 +1323,37 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 }
 
 .block8_form__agree__text {
   display: inline-block;
   font-size: 13px;
   color: #9B8FFF;
+  margin-left: auto;
 }
 
 .block8_form__agree__checkbox {
   appearance: none;
-  position: absolute;
+  position: absolute; 
 }
 
 .block8_form__agree__custom-checkbox {
-  display: inline-block;
-  background-color: #9B8FFF;
+  position: absolute;
+  background-image: url(img/block8_check.png);
+
   width: 16px;
   height: 16px;
 }
 
-.block8_form__agree__checkbox:checked+.block8_form__agree__custom-checkbox {
-  background-color: #23d349;
+.block8_form__agree__checkbox:checked +.block8_form__agree__custom-checkbox {
+  background-image: url(img/block8_check_checked.png);
+}
+.block8_form__agree__checkbox:checked:focus +.block8_form__agree__custom-checkbox {
+  background-image: url(img/block8_check_checked-focus.png);
+}
+.block8_form__agree__checkbox:focus +.block8_form__agree__custom-checkbox {
+  background-image: url(img/block8_check_focus.png);
 }
 
 .block8__img {
@@ -1252,47 +1363,33 @@ body {
 }
 
 .block8__img_1 {
-  background-image: url("img/block8_1.svg");
-  width: 173px;
-  height: 173px;
-  bottom: 50%;
-  right: -30px;
+  background-image: url("img/block8_1.png");
+
 }
 
 .block8__img_2 {
   background-image: url("img/block8_2.png");
-  width: 430px;
-  height: 219px;
-  bottom: 26px;
+
 }
 
 .block8__img_3 {
   background-image: url("img/block8_3.png");
-  width: 165px;
-  height: 165px;
-  bottom: -76px;
-  right: -10px;
+
 }
 
 .block8__img_4 {
-  background-image: url("img/block8_4.svg");
-  width: 146px;
-  height: 146px;
-  top: -66px;
-  left: 350px;
+  background-image: url("img/block8_4.png");
+
 }
 
 .block8__img_5 {
   background-image: url("img/block8_5.png");
-  width: 58px;
-  height: 58px;
-  bottom: 141px;
-  left: 512px;
 }
 
 @media (min-width: 1200px) {
   .block8 {
     grid-template-areas: "f_header f_form""f_text f_form";
+    grid-template-rows: 120px 1fr;
     padding-top: 41px;
     padding-left: 97px;
     column-gap: 44px;
@@ -1303,7 +1400,10 @@ body {
   .block8__header {
     line-height: 166.4%;
     grid-area: f_header;
-    width: 100px;
+    width: 300px;
+    justify-self: left;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .block8__form {
@@ -1313,30 +1413,30 @@ body {
   }
 
   .block8__img_1 {
-    width: 173px;
-    height: 173px;
-    bottom: 50%;
-    right: -30px;
+    width: 70px;
+    height: 70px;
+    top: 30%;
+    right: 5px;
   }
 
   .block8__img_2 {
-    width: 430px;
-    height: 219px;
-    bottom: 26px;
+    width: 400px;
+    height: 200px;
+    bottom: 20px;
   }
 
   .block8__img_3 {
-    width: 165px;
-    height: 165px;
-    bottom: -76px;
-    right: -10px;
+    width: 100px;
+    height: 100px;
+    bottom: -50px;
+    right: 10px;
   }
 
   .block8__img_4 {
-    width: 146px;
-    height: 146px;
-    top: -66px;
-    left: 350px;
+    width: 50px;
+    height: 50px;
+    top: -26px;
+    left: 450px;
   }
 
   .block8__img_5 {
@@ -1359,6 +1459,7 @@ body {
     padding-bottom: 223px;
     margin-top: 85vw;
   }
+  
 
   .block8__form {
     min-width: 320px;
@@ -1366,10 +1467,10 @@ body {
   }
 
   .block8__img_1 {
-    width: 173px;
-    height: 173px;
-    bottom: 45%;
-    right: 30px;
+    width: 90px;
+    height: 90px;
+    top: 45%;
+    right: 25px;
   }
 
   .block8__img_2 {
@@ -1380,23 +1481,24 @@ body {
   }
 
   .block8__img_3 {
-    width: 165px;
-    height: 165px;
+    width: 75px;
+    height: 75px;
     bottom: 46px;
-    right: 19px;
+    right: 32px;
   }
 
   .block8__img_4 {
-    width: 146px;
-    height: 146px;    
-    left: 10vw;
+    width: 70px;
+    height: 70px;
+    left: 80px;
+    top: -25px;
   }
 
   .block8__img_5 {
     width: 58px;
     height: 58px;
-    bottom: 225px;
-    left: 17px;
+    bottom: 240px;
+    left: 50px;
   }
 
 }
@@ -1406,47 +1508,52 @@ body {
     grid-template-areas: "f_header""f_text""f_form";
     justify-items: center;
     padding-top: 10px;
-    margin-left: 14px;
-    margin-right: 16px;
+    margin-left: 3px;
+    margin-right: 6px;
     padding-bottom: 152px;
     margin-top: 95vw;
+    min-width: 340px;
   }
 
   .block8__form {
     gap: 20px;
-    padding: 23px 37px 20px 46px;
-
-  }
+    padding: 21px 31px;
+    min-width: 320px;
+    margin: 0;
+    }
+    .block8__form__text1{
+      font-size: 18px;
+    }
 
   .block8_form__agree {
     padding-top: 20px;
   }
 
   .block8__img_1 {
-    width: 30vw;
-    height: 173px;
-    top: -55px;
-    right: -30px;
+    width: 50px;
+    height: 50px;
+    top: -15px;
+    right: -2px;
   }
 
   .block8__img_2 {
-    width: 60vw;
-    height: 30vw;
-    bottom: 20px;
+    width: 211px;
+    height: 105px;
+    bottom: 0;
     left: 0;
   }
 
   .block8__img_3 {
-    width: 30vw;
-    height: 30vw;
+    width: 70px;
+    height: 70px;
     bottom: 80px;
-    right: -35px;
+    right: 5px;
   }
 
   .block8__img_4 {
-    width: 25vw;
-    height: 25vw;
-    top: -66px;
+    width: 50px;
+    height: 50px;
+    top: -15px;
     left: 10px;
   }
 
@@ -1493,20 +1600,24 @@ body {
 }
 
 .footer__btn {
+  visibility: hidden;
+  grid-area: btn;
+  
+  text-align: center;
+  line-height: 60px;
+}
+
+.footer__btn__visual {
+  visibility: visible;
   grid-area: btn;
   width: 341px;
   height: 60px;
   border-radius: 5px;
   text-align: center;
   line-height: 60px;
-}
-
-.footer__btn__visual {
-  width: 341px;
-  height: 60px;
-  border-radius: 5px;
   background-color: #6B5AF9;
   color: white;
+  font-family: 'Montserrat';
 }
 
 .footer__line {
@@ -1683,74 +1794,6 @@ body {
   
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Вспомогательные классы, которые используются много где.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-.text-style_h2 {
-  color: #2A2367;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: normal;  
-}
-
-/* линки вешаются на все кнопки*/
-.link-btn {
-  text-decoration: none;
-  font-weight: 800;
-}
-.link-btn__visual-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #6B5AF9; 
-  font-size: 12px;
-}
-/* Кнопка ЗАКАЗАТЬ ЗВОНОК*/
-.cost-link_visual {
-  margin-left: auto;
-  margin-right: auto;
-  width: 275px;
-  height: 60px;
-  border-radius: 5px;
-  color: white;
-  text-decoration: none;
-}
-.text-style_normal {
-  color: #2A2367;
-}
-.text-style_colored {
-  color: #6B5AF9;
-}
-@media (min-width: 1200px)  {
-  .block{
-    margin-bottom: 150px;
-  }
-
-}
-
-@media (min-width: 768px) and  (max-width: 1200px) { 
-  .body {
-    margin-left: 10px;
-    margin-right: 10px;
-  } 
-  
-  body {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .block{
-    margin-bottom: 100px;
-  }
-
-  .text-style_h2 {    
-    font-size: 24px;
-  }
-}
-@media (max-width: 768px) {
-  .text-style_h2 {
-    margin-left: 14px;
-    font-size: 18px;
-  }
-}
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 /* ~~~~~~~~~~Попап визуал  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 .popup-call {
@@ -1759,28 +1802,37 @@ body {
   align-items: center;
   border-radius: 10px;
   background: #FFF;
-  position: absolute;
+  position: fixed;
   top: 50%;   
   left: 50%;                      
   transform: translate(-50%, -50%); 
   z-index:2;
+  opacity: 1;
+  transition: 
+    opacity 0.5s,
+    visibility 0.5s;
 }
 .popup-background {
   visibility: hidden;
 }
 .popup-background_visual { 
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.20);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
   visibility: visible;
+  opacity: 1;
+  transition: 
+    opacity 0.5s,
+    visibility 0.5s;
 }
-.popup-hidden {
-  display: none;
+.popup-hidden {  
+    visibility: hidden; 
+    opacity: 0;    
 }
 
 .popup-call__header{
@@ -1869,9 +1921,12 @@ body {
   transform: translate(-50%, -50%); 
 }
 
-/* компик */
 .popup-call__input-submit-visual {
   width:371px;
+}
+.popup-call__exit-btn-x{
+  top:0;
+  right: 0;
 }
 @media (min-width: 1200px)
 {
@@ -1915,10 +1970,85 @@ body {
   }
   .popup-call__input-submit-visual {
     width:310px;
-  }
+  }  
 }
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~        ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-/* Переопределить отступы между блоками. 150 ПК иначе 100    */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Вспомогательные классы, которые используются много где.... ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.text-style_h2 {
+  color: #2A2367;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;  
+}
+
+/* линки вешаются на все кнопки*/
+.link-btn {
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.link-btn__visual-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #6B5AF9; 
+  font-size: 12px;
+  border: none;
+  transition:
+  background-color 0.5s;
+}
+.link-btn__visual-button:hover {
+  background-color:#6F19E3;
+}
+/* Кнопка ЗАКАЗАТЬ ЗВОНОК*/
+.cost-link_visual {
+  margin-left: auto;
+  margin-right: auto;
+  width: 275px;
+  height: 60px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none;
+}
+.text-style_normal {
+  color: #2A2367;
+}
+.text-style_colored {
+  color: #6B5AF9;
+}
+@media (min-width: 1200px)  {
+  .block{
+    margin-bottom: 150px;
+  }
+
+}
+
+@media (min-width: 768px) and  (max-width: 1200px) { 
+  .body {
+    margin-left: 10px;
+    margin-right: 10px;
+  } 
+  
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .block{
+    margin-bottom: 100px;
+  }
+
+  .text-style_h2 {    
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .text-style_h2 {
+    margin-left: 14px;
+    font-size: 18px;
+  }
+}
+
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
