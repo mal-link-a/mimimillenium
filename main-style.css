@@ -1601,8 +1601,7 @@ body {
 
 .footer__btn {
   visibility: hidden;
-  grid-area: btn;
-  
+  grid-area: btn;  
   text-align: center;
   line-height: 60px;
 }
@@ -1622,7 +1621,7 @@ body {
 
 .footer__line {
   grid-area: line;
-  height: 0.5px;
+  height: 1px;
   background-color: #6B5AF9;
   margin-bottom: 44px;
 }
@@ -1679,6 +1678,13 @@ body {
 @media (min-width: 1200px) {
   .footer {
     padding: 75px 140px 58px 140px;
+    position: absolute;
+    justify-content: center;
+    left:0;
+    width: 100%;
+  }
+  .footer__btn {
+    margin-bottom: 30px;;
   }
   .footer__text1 {    
     margin-bottom: 30px;    
@@ -1704,6 +1710,7 @@ body {
   .footer {
     padding: 42px 50px 58px 50px;
   }
+  
   .footer__text1 {    
     margin-bottom: 6px;    
     font-size: 24px;
@@ -1752,6 +1759,7 @@ body {
   }
   .footer__line {   
     margin-bottom: 29px;
+    width: 95%;
   }
   .footer__text1 {    
     margin-bottom: 30px;    
