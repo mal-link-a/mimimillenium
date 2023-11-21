@@ -9,6 +9,11 @@
   src: url(./fonts/Montserrat/Montserrat-Medium.ttf)
 }
 @font-face {
+  font-weight: 600;
+  font-family: 'Montserrat';
+  src: url(./fonts/Montserrat/Montserrat-SemiBold.ttf)
+}
+@font-face {
   font-weight: 700;
   font-family: 'Montserrat';
   src: url(./fonts/Montserrat/Montserrat-Bold.ttf)
@@ -95,6 +100,7 @@ body {
 
 .block1__text_style2 {
   line-height: 137.4%;
+  font-weight: 600;
 }
 
 .text-style_h2 {
@@ -278,9 +284,26 @@ body {
   .agent__mobile {
     display: none !important;
   }
-  .block1{
+  .block1 {
     margin-bottom: 154px;
+    margin: 0px;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-template-rows: 100px 1fr;
+    grid-template-areas: "h1 h1""content image";
+    justify-content: start;
+    align-content: start;
+    row-gap: 33px;
   }
+
+  .main__h1 {
+    grid-area: h1;
+    font-size: 36px;
+    font-weight: 700;
+    overflow: visible;
+  }
+
   .block1__button{
     margin-top: 116px;
     margin-bottom: 20px
@@ -357,35 +380,6 @@ body {
     color: white;
   }
 
-
-  /*.page-header__big-info__call-link__visual-button {
-    margin: auto;
-    margin-left: 20px;
-    width: 177px;
-    height: 60px;
-    border-radius: 5px;
-    color: white;
-  }*/
-  /* ............1........1................1.................1.................1.............1.................1...........1....... .....1.........1...*/
-  /* ........................................................................................................................ .........................*/
-  .block1 {
-    margin: 0px;
-    padding: 0px;
-    display: grid;
-    grid-template-columns: 2fr 5fr;
-    grid-template-rows: 100px 1fr;
-    grid-template-areas: "h1 h1""content image";
-    justify-content: start;
-    align-content: start;
-    row-gap: 33px;
-  }
-
-  .main__h1 {
-    grid-area: h1;
-    font-size: 36px;
-    font-weight: 700;
-    overflow: visible;
-  }
 
   .block1__img-container {
     grid-area: image;
@@ -1082,7 +1076,7 @@ body {
 }
 
 .block6__list__textbox {
-  color: var(--1, #2A2367);
+  color: #2A2367;
   margin: 0px;
 }
 
@@ -2025,6 +2019,9 @@ body {
 }
 .text-style_colored {
   color: #6B5AF9;
+}
+.text-style_600 {
+  font-weight: 600;
 }
 @media (min-width: 1200px)  {
   .block{
