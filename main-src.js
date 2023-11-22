@@ -11,6 +11,8 @@ var rectangleAnimated = document.querySelector('.page-header__dropdown__button__
 var btnOpenPopup = document.querySelectorAll('cost-link');
 var popup_window = document.querySelector('.popup-call');
 var popup_background = document.querySelector(".popup-background_visual");
+// ~~~~~~ Хедер Хедер Хедер Хедер Хедер Ходор Хедер Хедер ~~~~~
+var head = document.querySelector('.page-header');
 
 //Блок 2
 advantagesCheckBox.addEventListener('change', function () {
@@ -29,9 +31,10 @@ advantagesCheckBox.addEventListener('change', function () {
 function headerDropdownOpen() 
 {
     document.body.style.overflow = 'hidden';
-    document.body.style.height = '100vw';
-    headerContent.classList.remove('popup-hidden');
-    headerDropdownBack.classList.remove('popup-hidden');
+   document.body.style.height = '100vw';
+
+    headerContent.classList.remove('block-hidden');
+    headerDropdownBack.classList.remove('block-hidden');
     rectangleAnimated.classList.add('page-header__dropdown__button__visual_rectangle3_active');
 
 }
@@ -39,28 +42,25 @@ function headerDropdownClose() //Функция закрытия выпадаю�
 {
     document.body.style.overflow = 'auto';
     document.body.style.height = 'auto';
-    headerContent.classList.add('popup-hidden');
-    headerDropdownBack.classList.add('popup-hidden');
+    head.classList.remove('.fixed');
+    headerContent.classList.add('block-hidden');
+    headerDropdownBack.classList.add('block-hidden');
     rectangleAnimated.classList.remove('page-header__dropdown__button__visual_rectangle3_active');
 }
 function popupOpen()
 {
-    document.body.style.overflow = "hidden";
-    document.body.style.height = "100vw";    
-    popup_window.classList.remove("popup-hidden");
-    popup_background.classList.remove("popup-hidden");
+    popup_window.classList.remove("block-hidden");
+    popup_background.classList.remove("block-hidden");
 }
 function popupClose()
 {
-    document.body.style.overflow = 'auto';
-    document.body.style.height = 'auto';
-    popup_window.classList.add('popup-hidden');
-    popup_background.classList.add('popup-hidden');       
+    popup_window.classList.add('block-hidden');
+    popup_background.classList.add('block-hidden');       
 
 }
 
 headerDropdown.addEventListener('click', function () {   
-    if (headerContent.classList.contains('popup-hidden')) {        
+    if (headerContent.classList.contains('block-hidden')) {        
         headerDropdownOpen();        
     }
     else {
@@ -74,13 +74,13 @@ headerDropdown.addEventListener('click', function () {
 
 //Покажем, что умеем в делегирование, хотя именно тут оно мне не нравится
 
-var head = document.querySelector('.page-header');
+
 head.addEventListener('click', function(evt) {
     let target = evt.target;  
     if (target.classList.contains('ichy-block1-button')) //Откроем попап
     {       
         //Если выпадающее меню открыто, закрываем его
-        if (!headerContent.classList.contains('popup-hidden'))  
+        if (!headerContent.classList.contains('block-hidden'))  
         {
             headerDropdownClose();
         }        

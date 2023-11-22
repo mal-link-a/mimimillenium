@@ -9,7 +9,18 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
 
   <!--Линки! -->
-  <link href="main-style.css" rel="stylesheet">
+  <link href="./css/header-style.css" rel="stylesheet">
+  <link href="./css/footer-style.css" rel="stylesheet">
+  <link href="./css/popup-style.css" rel="stylesheet">
+  <link href="./css/main-style.css" rel="stylesheet">
+  <link href="./css/block1-style.css" rel="stylesheet">
+  <link href="./css/block2-style.css" rel="stylesheet">
+  <link href="./css/block3-style.css" rel="stylesheet">
+  <link href="./css/block4-style.css" rel="stylesheet">
+  <link href="./css/block5-style.css" rel="stylesheet">
+  <link href="./css/block6-style.css" rel="stylesheet">
+  <link href="./css/block7-style.css" rel="stylesheet">
+  <link href="./css/block8-style.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -25,26 +36,17 @@
   <!--ВЕРХНЯЯ ПАНЕЛЬ — кнопка меню - логотип - кнопка обратной связи -->
   <!--НА хай размерах — кнопка меню  меню становится обычным меню nav - логотип переезжает в начало - кнопка обратной связи трансформируется и получает новую информацию -->
   <header class="page-header">
-    <div class="page-header__dropdown dropdown agent__mobile">
-      <!-- <label>
-        <input type="checkbox" class="page-header__dropdown__button dropdown__button" id="dropdown1">
-        <div class="page-header__dropdown__button__visual">
-          <div class="page-header__dropdown__button__visual_rectangle1 rectangle"></div>
-          <div class="page-header__dropdown__button__visual_rectangle2 rectangle"></div>
-          <div class="page-header__dropdown__button__visual_rectangle3 rectangle"></div>
-        </div>
-
-        </label>-->        
+    <div class="page-header__dropdown dropdown agent__nopc">
+            
           <button class="page-header__dropdown__button dropdown__button" id="dropdown1">
           <div class="page-header__dropdown__button__visual">
             <div class="page-header__dropdown__button__visual_rectangle1 rectangle"></div>
             <div class="page-header__dropdown__button__visual_rectangle2 rectangle"></div>
             <div class="page-header__dropdown__button__visual_rectangle3 rectangle"></div>
           </div> </button>
-        
 
          <!-- ~~~~~~~~~~~~ --> 
-        <div class="dropdown-menu-mobile popup-hidden">
+        <div class="dropdown-menu-mobile block-hidden">
           <nav class="dropdown-menu-mobile__nav">
             <ul class="dropdown-menu-mobile__nav__list">
               <li class="dropdown-menu-mobile__nav__list__list-item"> <a class="ichy-block1-button2" href="#t1">Главная</a></li>
@@ -65,7 +67,7 @@
             <img class="popup-exit-btn__container_visual" src="img/v_popup-x.svg"></div>
           </button>        
         </div>
-        <div class="dropdown-menu-mobile__background popup-hidden"></div>
+        <div class="dropdown-menu-mobile__background block-hidden"></div>
        <!-- </label> --> 
     </div>
 
@@ -73,12 +75,12 @@
       <img class="page-header__logo__image image-link__img" src="img/v_header-logo.svg" alt="Millenium">
     </a>
 
-    <button class="page-header__call-link-mobile image-link agent__mobile cost-link link-btn__visual-button ichy-block1-button">
-      <img class="page-header__call-link__agent-mobile image-link__img " src="img/v_header_btn-call.png" alt="Обратная связь">
+    <button class="page-header__call-link-mobile image-link  cost-link link-btn__visual-button agent__nopc ichy-block1-button">
+      <img class="page-header__call-link__agent-mobile image-link__img agent__nopc" src="img/v_header_btn-call.png" alt="Обратная связь">
       <!-- Отображается на мобилках и планшетах-->
     </button>
 
-    <nav class="page-header__big-menu agent__tablepc">
+    <nav class="page-header__big-menu agent__notablet agent__notablet agent__nophone">
       <ul class="page-header__big-menu__list">
         <li class="page-header__big-menu__list__item"> <a href="#t1">Главная</a> </li>
         <li class="page-header__big-menu__list__item"> <a href="#t2">Цены</a> </li>
@@ -87,7 +89,7 @@
       </ul>
     </nav>
 
-    <div class="page-header__big-info agent__tablepc">
+    <div class="page-header__big-info agent__notablet agent__notablet agent__nophone">
       <div class="page-header__big-info__block-contacts">
         <a href="#" class="page-header__big-info__block-contacts__link-telegram"> <img src="img/v_telegram2.svg"
             alt="telegram"></img> </a>
@@ -108,14 +110,14 @@
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
      <!--!!!!!!!!!!!!!!!!!! 1 Разработка интернет-магазинов на 1C-Битрикс !!!!!!!!!!!!!!!!!!!!!!!-->
     <div class="block1 block">
-      <h1 class="main__h1">Разработка интернет-магазинов <br class="agent__notablet"><span class="text-style_colored">на
+      <h1 class="main__h1">Разработка интернет-магазинов <br class="agent__notablet"><span class="text-style_colored-blue">на
           1С-Битрикс</span></h1><br>
     
     
       <img class="block1__img-container main__img-container" src="img/block1_1.png" alt="">
       <div class="block1__content">
-        <div class="block1__text_style1 text-style_normal"> Разработаем интернет-магазин за 30 дней с уникальным дизайном и продуманной
-          структурой который <span class="text-style_colored block1__text_style1-colored"> выделит вас на фоне
+        <div class="block1__text_style1"> Разработаем интернет-магазин за 30 дней с уникальным дизайном и продуманной
+          структурой который <span class="text-style_colored-blue block1__text_style1-colored"> выделит вас на фоне
             конкурентов</span>
         </div>
     
@@ -123,7 +125,7 @@
           <div class="cost-link_visual link-btn__visual-button">Узнать стоимость</div>
         </a>
     
-        <div class="block1__text_style2 text-style_normal"><span class="text-style_colored">
+        <div class="block1__text_style2"><span class="text-style_colored-blue">
             Оставьте заявку и получите бесплатную консультацию от специалиста, полный расчет стоимости разработки и
             бонус:</span><br>
           «15 сервисов которые покажут стратегию продвижения конкурентов, всё об их выдаче в поиске и не только»</div>
@@ -132,7 +134,7 @@
      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
      <!--!!!!!!!!!!!!!!!!!2 Мы создаем интернет-магазины, которые продают !!!!!!!!!!!!!!!!!!!!!!!-->
     <div class="block2 block " id="t2">
-      <h2 class="block2__header text-style_h2">Мы создаём интернет-магазины, <span class="text-style_colored">которые
+      <h2 class="block2__header text-style_h2">Мы создаём интернет-магазины, <span class="text-style_colored-blue">которые
           продают</span></h2>
       <div class="block2__panel agent_no-mobile">
         <div class="block2__panel__item">
@@ -280,7 +282,7 @@
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
   <!--!!!!!!!!!!!!!!!!!!!!!!!!!!  3 Что вы получаете ? !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
   <div class="block3 block" id="t3">
-    <h2 class="text-style_h2">Что вы <span class="text-style_colored">получаете ?</span></h2>
+    <h2 class="text-style_h2">Что вы <span class="text-style_colored-blue">получаете ?</span></h2>
   
     <div class="block3__main">
   
@@ -401,13 +403,13 @@
   <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 5 Исследуем бизнес ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
   <div class="block5 block" id="t5">
      <div class="block5__text">
-      <h2 class="text-style_h2 block5__text__header">Исследуем <span class="text-style_colored">бизнес</span></h2>
-      <p class="text-style_normal">Каждый клиент – своя история. Мы не берем шаблонные решения, а исследуем рынок конкретно под ваши цели и задачи.</p> <br> 
-      <p class="text-style_normal">Сделать интернет-магазин с нуля непросто. Нужен сайт с качественной разработкой дизайна, который не будет отвлекать
+      <h2 class="text-style_h2 block5__text__header">Исследуем <span class="text-style_colored-blue">бизнес</span></h2>
+      <p class="block5__text__normal">Каждый клиент – своя история. Мы не берем шаблонные решения, а исследуем рынок конкретно под ваши цели и задачи.</p> <br> 
+      <p class="block5__text__normal">Сделать интернет-магазин с нуля непросто. Нужен сайт с качественной разработкой дизайна, который не будет отвлекать
          от сути, наполнением и рабочими модулями. Кроме этого, для успешного запуска электронной торговой площадки владельцу
           бизнеса требуется найти поставщиков, выбрать товарные позиции, просчитать рентабельность, уладить другие организационные
            вопросы вне сети.</p> <br> 
-      <p class="text-style_normal"> Создание интернет-магазина лучше делегировать на профессионалов. Мы возьмем на себя вопросы по разработке интернет-магазина
+      <p class="block5__text__normal"> Создание интернет-магазина лучше делегировать на профессионалов. Мы возьмем на себя вопросы по разработке интернет-магазина
          под ключ. Специалисты компании предоставляют заказчику готовый продающий сайт. Он уже наполнен контентом, ориентирован
           на конечного потребителя и интуитивно понятен для заказчика.</p> 
      </div>
@@ -512,7 +514,7 @@
       <!-- 8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   8   -->
     <div class="block8 block" id="t7">
       <h2 class="text-style_h2 block8__header">Компания Millenium —</h2>
-      <div class="block8__text text-style_normal">
+      <div class="block8__text">
         <p>Это дорогая и долгая разработка интернет-магазинов на 1С Битрикс! Нельзя сделать <span class="text-style_600">качественный</span> цифровой продукт за
            дешево и быстро!</p> <br>
         <p>Мы создадим интернет-магазин с нуля. Заказчику не придется искать других IT-специалистов для дальнейшей настройки
@@ -537,7 +539,7 @@
         <label class="block8_form__agree" >
           <input class="block8_form__agree__checkbox" type="checkbox">
           <span class="block8_form__agree__custom-checkbox"></span>
-          <p class="block8_form__agree__text">Cогласен/а на <a src="#" class="text-style_link-b8">обработку персональных данных</a></p>
+          <p class="block8_form__agree__text">Cогласен/а на <a src="#" class="block8_form__agree__link">обработку персональных данных</a></p>
         </label>
       </form>
 
@@ -554,7 +556,7 @@
      <!-- ~~~  Подвал сайта  ~~~~~~~  Подвал сайта  ~~~~~~~  Подвал сайта  ~~~~~~~  Подвал сайта  ~~~~-->
      <footer class="footer">
       <span class="footer__text1 text-style_colored-white">Напишите Нам</span>
-      <span class="footer__text2 text-style_colored">info@millenium.ru</span>
+      <span class="footer__text2 text-style_colored-blue">info@millenium.ru</span>
 
       <button class="footer__btn link-btn">
         <div class="footer__btn__visual link-btn__visual-button">Заказать звонок</div>
@@ -591,9 +593,9 @@
 
 
      <button class="popup-background">
-      <div class="popup-background_visual popup-hidden" ></div></button>
+      <div class="popup-background_visual block-hidden" ></div></button>
 
-     <form class="popup-call popup-hidden">
+     <form class="popup-call block-hidden">
       <span class="popup-call__header">Заявка на консультацию</span>
 
       <label class="popup-call__input">

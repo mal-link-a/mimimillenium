@@ -1,0 +1,236 @@
+/* Оглавление сайта */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 1fr 4fr 1fr;
+    margin: 10px;
+  }
+  
+  .page-header__call-link-mobile {
+    width:62px;
+    height: 38px;
+    border-radius: 5px;
+    background-color: var(--col_blue);  
+  }
+  .page-header__call-link__agent-mobile {
+    width:20px;
+    height: 20px;
+  }
+  @media (max-width: 768px) {
+    .dropdown-menu-mobile{
+      width: 100%;
+    }
+    .dropdown-menu-mobile__exit-btn-x{
+      right: 10px;  
+    }
+    .page-header__call-link-mobile {
+        width:52px;
+        height: 32px;        
+      }
+  }
+  @media (min-width: 768px) and (max-width: 1200px) {
+    .dropdown-menu-mobile{    
+      width: 360px;
+    }
+    .dropdown-menu-mobile__exit-btn-x{
+      left: 10px;    
+    }
+  }
+  .dropdown-menu-mobile__background {
+    position: fixed;  
+    width: 100%;
+    height: calc(100vh - 62px);
+    background: rgba(163, 161, 161, 0.85);
+    backdrop-filter: blur(2px);
+    z-index: 2;
+    top: 62px;
+    opacity: 1;
+    visibility: visible;
+    transition: 
+    opacity 0.5s,
+    visibility 0.5s  ;
+  }
+  
+  .page-header__dropdown__button__visual_rectangle3 {
+    width: 41px;
+    background-color: var(--col_green);
+  }
+  
+  .dropdown-menu-mobile__nav__list {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    width: 320px;
+  }
+  
+  .dropdown-menu-mobile__nav__list__list-item {
+     font-size: 14px;
+    font-weight: 700;
+    padding-top: 28px;
+  }
+  
+  .dropdown-menu-mobile__nav__list__list-item a {
+    opacity: 1;
+    text-decoration: none;
+    color: var(--col_black);
+  }
+  
+  .dropdown-menu-mobile__nav__list__list-item a:hover {
+    opacity: 0.6;
+    color: var(--col_red);
+  }
+  
+  .dropdown-menu-mobile__info {
+    margin-top: auto;
+    margin-bottom: 42px;
+    color: var(--col_blue);
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .dropdown-menu-mobile__info p:first-child {
+    margin-bottom: 32px;
+  }
+  
+  /*  ................ Визуал кнопки выпадающего меню. Кнопка состоит из трёх прямоугольников фиксированного размера */
+  .page-header__dropdown__button {
+    /*Скроем ванильный чекбокс*/
+    visibility: hidden;
+  }
+  
+  /* Рисуем кнопку на css из трёх палок */
+  .page-header__dropdown__button__visual {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    visibility: visible;
+  }
+  
+  .rectangle {
+    border-radius: 1px;
+    background: var(--col_blue);
+  }
+  .page-header__dropdown__button__visual:hover .rectangle {
+    background-color:#6F19E3;
+  }
+  
+  .page-header__dropdown__button__visual_rectangle1 {
+    width: 41px;
+    height: 4px;
+    transition: background-color 0.5s;
+  }
+  
+  .page-header__dropdown__button__visual_rectangle2 {
+    width: 27px;
+    height: 4px;
+    transition: background-color 0.5s;
+  }
+  
+  .page-header__dropdown__button__visual_rectangle3 {
+    /*На эту палку анимация при нажатии */
+    width: 15px;
+    height: 4px;
+    transition: width 0.6s, background-color 0.5s;
+  }
+  .page-header__dropdown__button__visual_rectangle3_active
+  {
+    width:41px;
+    background-color: #43CD93;
+  }
+  .dropdown-menu-mobile {  
+    background-color: var(--col_white);
+    border-top: 1px solid #BBBBBB;
+    width: 360px;
+    height: calc(100vh - 62px);  
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    position: fixed;
+    left: 0px;
+    top: 62px;
+    z-index: 300;
+    visibility: visible;  
+    opacity: 1;
+    transition: 
+    opacity 0.5s,
+    visibility 0.5s  ;
+  }
+  @media all and (min-width: 1200px) {
+    /* ........................................................................................................................ .........................*/
+    /* Вкладка с навигацией для ПК  Вкладка с навигацией для ПК Вкладка с навигацией для ПК Вкладка с навигацией для ПК Вкладка с навигацией для ПК*/
+    
+    .page-header__big-menu__list {
+      list-style-type: none;
+      /*Убираем маркеры */
+      display: flex;
+      gap: 27px;
+      justify-content: flex-start;
+    }
+  
+  
+    .page-header__big-menu__list__item a {
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--col_black);
+    }
+  
+    /* ........................................................................................................................ .........................*/
+    /* Вкладка с инфой справа для ПК  Вкладка с инфой справа для ПК Вкладка с инфой справа для ПК Вкладка с инфой справа для ПК Вкладка с инфой справа для ПК   */
+  
+  
+    .page-header__big-info {
+      display: flex;
+      align-items: center;
+    }
+  
+    .page-header__big-info__block-contacts {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      justify-items: flex-end;
+      justify-self: flex-end;
+    }
+  
+    .page-header__big-info__block-contacts__link-telegram {
+      width: 16px;
+      height: auto;
+      padding-bottom: 16px;
+    }
+  
+    .page-header__big-info__block-contacts__link-whatsapp {
+      width: 16px;
+      height: auto;
+      padding-bottom: 16px;
+    }
+  
+    .page-header__big-info__block-contacts__info {
+      text-align: end;
+      font-size: 24px;
+      color: var(--col_black);
+    }
+  
+    .page-header__big-info__block-contacts__info__primetime {
+      font-size: 12px;
+    }  
+  
+    .page-header__big-info__call-link {
+      width: 177px;
+      height: 60px;
+      border: none;
+      border-radius: 5px;
+      background-color: var(--col_blue);
+      margin: auto;
+      margin-left: 20px;
+      color: var(--col_white);
+    }
+  
+  }
+  .fixed {
+    position:fixed;
+    left: 0;
+    top: 0;
+  }

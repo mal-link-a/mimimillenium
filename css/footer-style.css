@@ -1,0 +1,228 @@
+/* ~~~~  Подвал сайта  ~~~~ */
+.footer {
+    position: absolute;
+    left: 0;
+    width:100%;
+    display: grid;
+    grid-template-areas:
+      "t1 ."
+      "t2 btn"
+      "line line"
+      "t3 links"
+      "t4 ."
+      "logo logo"
+      "t5 t5"
+      "t6 t6";
+    justify-content: space-between;
+    background-color: var(--col_black);
+    margin-top: 255px;
+  }
+  
+  .footer__text1 {
+    grid-area: t1;  
+    font-weight: 700;  
+  }
+  
+  .footer__text2 {
+    grid-area: t2;
+    font-weight: 700;
+  }
+  
+  .footer__btn {
+    visibility: hidden;
+    grid-area: btn;  
+    text-align: center;
+    line-height: 60px;
+  }
+  
+  .footer__btn__visual {
+    visibility: visible;
+    grid-area: btn;
+    width: 341px;
+    height: 60px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 60px;
+    background-color: var(--col_blue);
+    color: var(--col_white);
+    font-family: 'Montserrat';
+  }
+  
+  .footer__line {
+    grid-area: line;
+    height: 1px;
+    background-color: var(--col_blue);
+    margin-bottom: 44px;
+  }
+  
+  .footer__text3 {
+    grid-area: t3;  
+    font-weight: 700;
+    
+  }
+  
+  .footer__links {
+    grid-area: links;
+    justify-self: end;
+  }
+  .footer__links__icon{
+    width: 35px;
+    height: 35px;  
+    border-radius: 50%;
+    padding-left:20px;
+  }
+  
+  .footer__text4 {
+    font-weight: 700;  
+    grid-area: t4;
+  }
+  
+  .footer__logo {
+    grid-area: logo;
+    justify-self: center;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .footer__text5 {
+    grid-area: t5;
+    justify-self: center;
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+  
+  .footer__text6 {
+    grid-area: t6;
+    justify-self: center;
+    font-size: 12px;
+    text-decoration-line: underline;
+  }
+  
+  
+  
+  
+  @media (min-width: 1200px) {
+    .footer {
+      padding: 75px 140px 58px 140px;      
+      justify-content: center;
+      left:0;
+      width: 100%;
+    }
+    .footer__btn {
+      margin-bottom: 30px;;
+    }
+    .footer__text1 {    
+      margin-bottom: 30px;    
+      font-size: 36px;
+    }
+  
+    .footer__text2 {   
+      margin-bottom: 30px;
+      font-size: 48px;
+      align-self: center;    
+    }
+    .footer__text3 {    
+      margin-bottom: 24px;
+      font-size: 18px;
+    }
+    .footer__text4 {   
+      font-size: 18px;    
+    }
+  
+  }
+  
+  @media (max-width: 1200px) and (min-width: 768px) {
+    .footer {
+      padding: 42px 50px 58px 50px;
+    }
+    
+    .footer__text1 {    
+      margin-bottom: 6px;    
+      font-size: 24px;
+    }
+  
+    .footer__text2 {   
+      margin-bottom: 30px;
+      font-size: 30px;
+      align-self: center;    
+    }
+    .footer__text3 {    
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+    .footer__text4 {   
+      font-size: 14px;    
+    }
+    .footer__logo{
+      margin-top: 32px;
+    }
+    .footer__btn{
+      margin-bottom: 30px;
+    }
+  
+  
+  }
+  
+  @media (max-width: 768px) {
+    
+    .footer {
+      padding: 27px 5px 42px 5px;
+      grid-template-areas:
+      "t1"
+      "t2"
+      "line"
+      "btn"
+      "links"
+      "t3" 
+      "t4"
+      "logo"
+      "t5"
+      "t6";
+      justify-content: center;
+      justify-items: center;
+      text-align: center;
+    }
+    .footer__line {   
+      margin-bottom: 29px;
+      width: 95%;
+    }
+    .footer__text1 {    
+      margin-bottom: 30px;    
+      font-size: 18px;
+    }
+  
+    .footer__text2 {   
+      margin-bottom: 30px;
+      font-size: 20px;    
+    }
+    .footer__btn{
+      margin-bottom: 30px;  
+      width: auto;  
+    }
+    .footer__btn__visual{    
+      width: 275px;
+    }
+    .footer__line{
+      margin-bottom: 38px;
+    }
+    .footer__links {
+      justify-self: center;
+      margin-bottom: 38px;
+  }
+    .footer__text3 {    
+      margin-bottom: 28px;
+      font-size: 14px;
+      width: 220px;
+    }
+    .footer__text4 {   
+      font-size: 14px;    
+    }
+    .footer__logo{
+      margin-top: 36px;
+      margin-bottom: 24px;  
+    }
+    .footer__text5 {   
+      margin-bottom: 30px;  
+    }  
+  }

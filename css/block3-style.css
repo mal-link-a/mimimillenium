@@ -1,0 +1,73 @@
+/* ~~~~ Блок 3 ~~~~~~ */
+.block3 {
+    margin-bottom: 150px;
+}
+
+.block3__main {}
+
+.block3__main h3 {
+    color: var(--col_blue);
+    font-size: 18px;
+    font-weight: 700;
+    padding-left: 18px;
+    padding-bottom: 10px;
+}
+
+.block3__main__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.block3__main__item__info-block {
+    color: var(--col_black);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.block3__btn {
+    margin-top: 99px;
+}
+
+.block3__main__item__info-block li {
+    padding-top: 8px;
+}
+
+@media all and (max-width: 768px) {
+    .block3 {
+        margin-bottom: 88px;
+    }
+
+    .block3__btn {
+        margin-top: 50px;
+    }
+
+    .block3__main__item {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .block3__main__item__info-block {
+        align-self: flex-start;
+        order: 1;
+    }
+
+    .block3__main__item__image {
+        width: 90vw;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+    .block3 {
+        margin-bottom: 77px;
+    }
+
+    .block3__btn {
+        margin-top: 85px;
+    }
+
+    .block3__main__item__image {
+        width: 50vw;
+    }
+}

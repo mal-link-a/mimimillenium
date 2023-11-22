@@ -1,0 +1,239 @@
+.block1 {
+    margin-left: 10px;
+    margin-top: 2em;
+}
+
+.main__h1 {
+    color: var(--col_black);
+    margin-top: 1em;
+    margin-bottom: -2em;
+    font-size: 2vw;
+}
+
+.block1__img__container {
+    display: block;
+    height: auto;
+    grid-template-rows: 100%;
+    grid-template-columns: 100%;
+    justify-content: center;
+    margin-bottom: 54px;
+}
+
+.block1__content {
+    display: flex;
+}
+
+.block1__button {
+    display: block;
+}
+.block1__text_style1 {
+    color: var(--col_black);
+}
+
+.block1__text_style2 {
+    line-height: 137.4%;
+    font-weight: 600;
+    color: var(--col_black);
+}
+
+/* Телефоны */
+@media all and (max-width: 760px) {
+    .main__h1 {
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    .block1__img-container {
+        max-width: 100%;
+    }
+
+    .block1__text_style1 {
+        font-weight: 400;
+        font-size: 12px;
+        margin-top: 29px;
+        margin-bottom: 50px;
+        margin-left: 7px;
+        
+    }
+
+    .block1__text_style1-colored {
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    .block1__text_style2 {
+        font-weight: 500;
+        font-size: 12px;
+        margin: 0 10px;
+        padding: 0px 15px;
+        font-size: 12px;
+        display: block;
+        text-align: center;
+    }
+    .block1__cost-link {
+        margin-bottom: 10px;
+    }
+
+    .block1__content {
+        flex-direction: column;
+        justify-content: center;
+        align-content: flex-start;
+    }
+
+    .block1__button {
+        margin-top: 22px;
+        margin-bottom: 10px
+    }
+}
+
+/* Планшеты */
+@media all and (min-width: 760px) and (max-width: 1200px) {
+    .page-header {
+        margin-right: 32px;
+        margin-left: 32px;
+    }
+
+    .block1 {
+        margin: 0px;
+        padding: 0px;
+        display: grid;
+        grid-template-columns: 1fr min(60vw, 960px);
+        grid-template-rows: 100px 1fr;
+        grid-template-areas: "h1 image""content image";
+        justify-items: center;
+        align-content: center;
+        margin-left: 10px;
+    }
+
+    .main__h1 {
+        grid-area: h1;
+        font-size: min(5vw, 24px);
+        font-weight: 700;
+        margin-bottom: 21px;
+        justify-self: start;
+        position: absolute;
+        margin-left: 10px;
+    }
+
+    .block1__img-container {
+        grid-area: image;
+        width: min(60vw, 960px);
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    .block1__content {
+        grid-area: content;
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .block1__button {
+        margin-top: 54px;
+        margin-bottom: 10px
+    }
+
+    .block1__cost-link {
+        margin-top: 54px;
+        justify-self: flex-end;
+        margin-bottom: 10px;
+    }
+
+    .block1__text_style1 {
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .block1__text_style1-colored {
+        font-weight: 700;
+        font-size: 12px;
+    }
+
+    .block1__text_style2 {
+        font-weight: 600;
+        font-size: 12px;
+        margin-top: auto;
+    }
+
+    .block1__text_style2-colored {
+        font-weight: 600;
+        font-size: 12px;
+        text-indent: 0;
+    }
+}
+
+/*  Выправляем картинку, когда она точно не заденет собой заголовок   */
+@media all and (min-width: 960px) and (max-width: 1200px) {
+    .bkock1__img-container {
+        margin-top: -40px;
+    }
+}
+
+/* Компьютеры */
+@media all and (min-width: 1200px) {
+    .block1 {
+        margin-bottom: 154px;
+        margin: 0px;
+        padding: 0px;
+        display: grid;
+        grid-template-columns: 2fr 5fr;
+        grid-template-rows: 100px 1fr;
+        grid-template-areas: "h1 h1""content image";
+        justify-content: start;
+        align-content: start;
+        row-gap: 33px;
+    }
+
+    .main__h1 {
+        grid-area: h1;
+        font-size: 36px;
+        font-weight: 700;
+        overflow: visible;
+    }
+
+    .block1__button {
+        margin-top: 116px;
+        margin-bottom: 20px
+    }
+
+    .block1__img-container {
+        grid-area: image;
+        margin-top: -160px;
+    }
+
+    .block1__content {
+        grid-area: content;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .block1__cost-link {
+        margin-top: 116px;
+    }
+
+    .block1__text_style1 {
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    .block1__text_style1-colored {
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .block1__text_style2 {
+        font-weight: 600;
+        font-size: 14px;
+    }
+
+    .block1__text_style2-colored {
+        font-weight: 600;
+        font-size: 14px;
+        text-indent: 0;
+    }
+}

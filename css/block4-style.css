@@ -1,0 +1,117 @@
+/* ~~~~~ Блок 4 ~~~~~ */
+.block4 {
+    padding: 26px;
+    border-radius: 10px;
+    background: #F0D577;
+}
+
+.block4__whiteline {
+    border-radius: 10px;
+    background: var(--col_white);
+    padding: 2px;
+
+}
+
+.block4__main {
+    padding: 0px;
+    border-radius: 10px;
+    background: #F0D577;
+
+}
+
+.block4__swiper__container__text1 {
+    color: #9F9F9F;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.block4__swiper__container__text2 {
+    color: var(--col_black);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.block4__swiper__container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+/*  ~~ Мобильные и планшетные настройки ~~*/
+@media (max-width: 1200px) {
+    .block4__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+        position: relative;
+        padding-bottom: 70px;
+    }
+
+    .block4__main__img {
+        width: 25%;
+        height: auto;
+    }
+
+    .block4 .block4__swiper {
+        width: 90%;
+        height: auto;
+        position: static;
+        box-shadow: none;
+    }
+
+    .block4__swiper__container {}
+
+    .block4__swiper__img {
+        width: 99%;
+    }
+
+    .block4 .agent__pc {
+        display: none;
+    }
+
+    .block4 .swiper-pagination {
+        margin-bottom: 20px;
+
+    }
+}
+/*  ~~ ПК ~~*/
+@media (min-width: 1200px) {
+    .block4 .agent__nopc {
+        display: none;
+    }
+
+    .block4__main {
+        display: flex;
+    }
+
+    .block4__main__img {
+        padding-left: 20px;
+    }
+
+    .block4__pc__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 94px;
+        padding: 20px 70px 20px 70px;
+        width: 20%;
+        height: auto;
+    }
+
+    .block4__pc__container::last-child {
+        margin-right: 80px;
+    }
+}
+/*  ~~ Планшет ~~*/
+@media (max-width: 1200px) and (min-width: 768px) {
+    .block4 {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+}
+/*  ~~ Телефон ~~*/
+@media (max-width: 768px) {
+    .block4 {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

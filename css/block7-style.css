@@ -1,0 +1,9 @@
+/* ~ Блок 7. Картинка на всю ширину. Фоновая */
+.block7 {
+    position: absolute;
+    width: 100%;
+    max-width: 1920px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }

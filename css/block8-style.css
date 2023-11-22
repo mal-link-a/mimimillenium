@@ -1,0 +1,346 @@
+/* ~~~ Блок 8. Обратная связь ~~~ */
+.block8 {
+    border-radius: 20px;
+    background: #F4F8FF;
+    display: grid;
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.block8__header {
+    line-height: 166.4%;
+    grid-area: f_header;
+}
+
+.block8__text {
+    grid-area: f_text;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: var(--col_black);
+}
+
+.block8__form {
+    grid-area: f_form;
+    border-radius: 20px;
+    background: #6B5AF9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.block8__form__text1 {
+    color: var(--col_white);
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 0;
+    text-align-last: center;
+    text-align: justify;
+    width: 100%;
+}
+
+.block8__form__text2 {
+    color: var(--col_white);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    padding: 0;
+    text-align-last: center;
+    text-align: justify;
+    width: 100%;
+}
+
+.block8_form__input {
+    background: #6B5AF9;
+    border: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.40);
+    margin-bottom: 20px;
+    width: 100%;
+    padding: 0;
+    font-size: 18px;
+    color: var(--col_white);
+}
+
+.block8__form input::placeholder {
+    color: #FFFFFF66;
+}
+
+.block8__form__submit {
+    height: 60px;
+    background-color: var(--col_white);
+    color: #6B5AF9;
+    text-align: center;
+    line-height: 60px;
+    padding: 0;
+    width: 100%;
+    transition:
+        background-color 0.6s,
+        color 0.6s;
+}
+
+.block8__form__submit:hover {
+    background-color: var(--col_black);
+    color: var(--col_lightBlue);
+}
+
+.block8__form__submit__button {
+    position: absolute;
+    visibility: hidden;
+
+}
+
+.block8_form__agree {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.block8_form__agree__text {
+    display: inline-block;
+    font-size: 13px;
+    color: #9B8FFF;
+    margin-left: auto;
+}
+
+.block8_form__agree__checkbox {
+    appearance: none;
+    position: absolute;
+}
+
+.block8_form__agree__custom-checkbox {
+    position: absolute;
+    background-image: url(../img/block8_check.png);
+
+    width: 16px;
+    height: 16px;
+}
+
+.block8_form__agree__checkbox:checked+.block8_form__agree__custom-checkbox {
+    background-image: url(../img/block8_check_checked.png);
+}
+
+.block8_form__agree__checkbox:checked:focus+.block8_form__agree__custom-checkbox {
+    background-image: url(../img/block8_check_checked-focus.png);
+}
+
+.block8_form__agree__checkbox:focus+.block8_form__agree__custom-checkbox {
+    background-image: url(../img/block8_check_focus.png);
+}
+
+.block8__img {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.block8__img_1 {
+    background-image: url("../img/block8_1.png");
+
+}
+
+.block8__img_2 {
+    background-image: url("../img/block8_2.png");
+
+}
+
+.block8__img_3 {
+    background-image: url("../img/block8_3.png");
+
+}
+
+.block8__img_4 {
+    background-image: url("../img/block8_4.png");
+
+}
+
+.block8__img_5 {
+    background-image: url("../img/block8_5.png");
+}
+
+/* ~~~ ПК ~~~ */
+@media (min-width: 1200px) {
+    .block8 {
+        grid-template-areas: "f_header f_form""f_text f_form";
+        grid-template-rows: 120px 1fr;
+        padding-top: 41px;
+        padding-left: 97px;
+        column-gap: 44px;
+        padding-bottom: 187px;
+        margin-top: 80vw;
+    }
+
+    .block8__header {
+        line-height: 166.4%;
+        grid-area: f_header;
+        width: 300px;
+        justify-self: left;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .block8__form {
+        min-width: 470px;
+        padding: 56px 56px 56px 46px;
+        margin-right: 98px;
+    }
+
+    .block8__img_1 {
+        width: 70px;
+        height: 70px;
+        top: 30%;
+        right: 5px;
+    }
+
+    .block8__img_2 {
+        width: 400px;
+        height: 200px;
+        bottom: 20px;
+    }
+
+    .block8__img_3 {
+        width: 100px;
+        height: 100px;
+        bottom: -50px;
+        right: 10px;
+    }
+
+    .block8__img_4 {
+        width: 50px;
+        height: 50px;
+        top: -26px;
+        left: 450px;
+    }
+
+    .block8__img_5 {
+        width: 58px;
+        height: 58px;
+        bottom: 141px;
+        left: 512px;
+    }
+
+}
+  /* ~~~ Планшет ~~~ */
+@media (min-width: 768px) and (max-width: 1200px) {
+    .block8 {
+        grid-template-areas: "f_header""f_text""f_form";
+        justify-items: center;
+        padding-left: 64px;
+        padding-right: 64px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-bottom: 223px;
+        margin-top: 85vw;
+    }
+
+    .block8__form {
+        min-width: 320px;
+        padding: 56px 56px 56px 46px;
+    }
+
+    .block8__img_1 {
+        width: 90px;
+        height: 90px;
+        top: 45%;
+        right: 25px;
+    }
+
+    .block8__img_2 {
+        width: 334px;
+        height: 172px;
+        bottom: 2px;
+        left: 0;
+    }
+
+    .block8__img_3 {
+        width: 75px;
+        height: 75px;
+        bottom: 46px;
+        right: 32px;
+    }
+
+    .block8__img_4 {
+        width: 70px;
+        height: 70px;
+        left: 80px;
+        top: -25px;
+    }
+
+    .block8__img_5 {
+        width: 58px;
+        height: 58px;
+        bottom: 240px;
+        left: 50px;
+    }
+
+}
+  /* ~~~ Телефон ~~~ */
+@media (max-width: 768px) {
+    .block8 {
+        grid-template-areas: "f_header""f_text""f_form";
+        justify-items: center;
+        padding-top: 10px;
+        margin-left: 3px;
+        margin-right: 6px;
+        padding-bottom: 152px;
+        margin-top: 95vw;
+        min-width: 340px;
+    }
+
+    .block8__form {
+        gap: 20px;
+        padding: 21px 31px;
+        min-width: 320px;
+        margin: 0;
+    }
+
+    .block8__form__text1 {
+        font-size: 18px;
+    }
+
+    .block8_form__agree {
+        padding-top: 20px;
+    }
+
+    .block8__img_1 {
+        width: 50px;
+        height: 50px;
+        top: -15px;
+        right: -2px;
+    }
+
+    .block8__img_2 {
+        width: 211px;
+        height: 105px;
+        bottom: 0;
+        left: 0;
+    }
+
+    .block8__img_3 {
+        width: 70px;
+        height: 70px;
+        bottom: 80px;
+        right: 5px;
+    }
+
+    .block8__img_4 {
+        width: 50px;
+        height: 50px;
+        top: -15px;
+        left: 10px;
+    }
+
+    .block8__img_5 {
+        width: 13vw;
+        height: 13vw;
+        bottom: 230px;
+        left: 10px;
+    }
+
+}
+.block8_form__agree__link {
+    color: var(--col_white);
+}

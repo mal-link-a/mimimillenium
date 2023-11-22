@@ -1,0 +1,183 @@
+@font-face {
+  font-weight: 400;
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-Regular.ttf)
+}
+@font-face {
+  font-weight: 500;
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-Medium.ttf)
+}
+@font-face {
+  font-weight: 600;
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf)
+}
+@font-face {
+  font-weight: 700;
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-Bold.ttf)
+}
+@font-face {
+  font-weight: 800;
+  font-family: 'Montserrat';
+  src: url(../fonts/Montserrat/Montserrat-ExtraBold.ttf)
+}
+
+/*Переопределяем расчёт размеров у боксов с надеждой, что это нам когда-нибудь поможет   (Помогло)*/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+:root {
+  --col_white:  #fff;  /*  var(--col_white) */
+  --col_blue:  #6B5AF9; /*  var(--col_blue) */
+  --col_blueHover: #6F19E3; /*  var(--col_blueHover) */
+  --col_black:  #2A2367; /*  var(--col_black) */
+  --col_green: #43CD93; /* Используется только для цвета палки бутерброда при нажатии */
+  --col_red: rgb(160, 4, 30);  /*  Только пункты меню на бутерброде на ховере */
+  --col_lightBlue: #D1CCFF; /* var(--col_lightBlue)  Используется только для цвета кнопки блок8 на ховере */   
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Montserrat', sans-serif;
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
+
+
+@media (min-width: 1200px)  {
+  .block{
+    margin-bottom: 150px;
+  }
+}
+
+@media (min-width: 768px) and  (max-width: 1200px) { 
+  .body {
+    margin-left: 10px;
+    margin-right: 10px;
+  } 
+
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .block{
+    margin-bottom: 100px;
+  } 
+}
+
+.text-style_colored-white {
+  color: var(--col_white);
+}
+
+
+/* Настройки видимости */
+.block-hidden {   /* Вешается на всплывающие меня */
+  visibility: hidden; 
+  opacity: 0;    
+}
+
+
+/* Кнопка выключения попапа, используется в двух местах */
+.popup-exit-btn {
+  position: absolute;
+  visibility: hidden; 
+  cursor: pointer;
+}
+.popup-exit-btn__container {
+  width: 50px;
+  height: 50px;
+  visibility: visible;  
+}
+.popup-exit-btn__container_visual{
+  width: 13px;
+  height: 13px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Вспомогательные классы,  используются везде? где ~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+
+/* Вешаются на все кнопки главного окна*/
+.link-btn {
+  text-decoration: none;
+  font-weight: 800;
+}
+.link-btn__visual-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:  var(--col_blue); 
+  font-size: 12px;
+  border: none;
+  transition:
+  background-color 0.5s;
+}
+.link-btn__visual-button:hover {
+  background-color:var(--col_blueHover);
+}
+/* Кнопка ЗАКАЗАТЬ ЗВОНОК*/
+.cost-link_visual {
+  margin-left: auto;
+  margin-right: auto;
+  width: 275px;
+  height: 60px;
+  border-radius: 5px;
+  color: var(--col_white);
+  text-decoration: none;
+}
+.text-style_normal {
+  color: var(--col_black);
+}
+.text-style_colored-blue {
+  color: var(--col_blue);
+}
+.text-style_600 {
+  font-weight: 600;
+}
+
+
+
+
+
+
+/* Заголовки блоков */
+.text-style_h2 {
+  color: var(--col_black);
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;  
+}
+@media (min-width: 768px) and  (max-width: 1200px) {
+  .text-style_h2 {
+    margin-left: 14px;    
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .text-style_h2 {
+    margin-left: 14px;
+    font-size: 18px;
+  }
+}
+@media all and (max-width: 760px) { 
+  .agent__nophone { display: none; }  
+} 
+
+@media all and (min-width: 760px) and (max-width: 1200px) {  
+  .agent__notablet { display: none; }
+}
+@media all and (min-width: 1200px) {  
+  .agent__nopc {display: none; }
+}

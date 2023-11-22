@@ -1,0 +1,218 @@
+/*.. Блок 2 ......... */
+.block2__header {
+    padding-bottom: 54px;
+    text-align: start;
+}
+
+.block2__panel {
+    box-sizing: content-box;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 54px 20px;
+    overflow: hidden;
+    height: 220px;
+    padding-bottom: 0;
+    padding-top: 30px;
+    transition:
+        height 1.2s,
+        padding-bottom 1.2s;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.block2__panel__item {
+    height: 200px;
+    border-radius: 10px;
+    background: var(--col_white);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+}
+
+
+.block2__panel__item__number {
+    color: var(--col_white);
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+    font-size: 64px;
+    font-weight: 700;
+    padding-top: 2px;
+    padding-left: 15px;
+    padding-bottom: 1px;
+    margin: 0px;
+}
+
+.block2__panel__item__title {
+    padding: 0px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0px;
+    padding-left: 15px;
+}
+
+.block2__panel__item__stick {
+    width: 175px;
+    height: 2px;
+    background-color: #E37575;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 15px;
+}
+
+.block2__panel__item__descriprtion {
+    position: relative;
+    width: 320px;
+    font-size: 12px;
+    font-weight: 400;
+    padding-top: 8px;
+    padding-left: 15px;
+    margin: 0px;
+
+}
+
+.img_arrow {
+    position: relative;
+    left: -4px;
+    margin: 0 49%;
+    margin-top: 28px;
+    margin-bottom: 16px;
+    width: 36px;
+    height: 36px;
+    transition:
+        transform 1.2s,
+        margin-bottom 1.2s,
+        margin-top 1.2s;
+}
+
+.img_arrow_opened {
+    transform: scaleY(-1);
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.img_arrow_left {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    width: 11px;
+    height: 3px;
+    background-color: #6B5AF9;
+    border-radius: 3px;
+    transform: rotate(135deg);
+}
+
+.img_arrow_right {
+    position: absolute;
+    left: 8px;
+    top: 14px;
+    width: 11px;
+    height: 3px;
+    background-color: #6B5AF9;
+    border-radius: 3px;
+    transform: rotate(45deg);
+}
+
+.block2__button {
+    cursor: pointer;
+}
+
+.block2__button__checkbox {
+    position: absolute;
+    appearance: none;
+
+}
+
+/* для телефонов*/
+@media all and (max-width: 768px) {
+    .block2 .agent_no-mobile {
+        display: none;
+    }
+
+    .block2__panel__item {
+        box-shadow: none;
+    }
+
+    .swiper {
+        box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+    }
+
+    .block2 .swiper-pagination {
+        position: relative;
+        bottom: 0;
+        top: 0;
+        margin-top: 31px;
+        margin-bottom: 44px;
+    }
+
+    .block2__swiper {
+        width: 340px;
+    }
+
+    .block2__panel__item__descriprtion {
+        width: 320px;
+    }
+}
+
+/* для планшетиков*/
+@media all and (min-width: 768px) and (max-width: 1200px) {
+    .block2__panel_open {
+        height: 700px;
+        padding-bottom: 55px;
+    }
+
+    .block2__panel {
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .main .agent_mobile {
+        display: none;
+    }
+
+    .block2__panel__item {
+        width: 360px;
+    }
+}
+
+/* Небольшие правки, чтобы флекс выдавал правильное количество элементов в строке */
+@media all and (min-width: 768px) and (max-width: 1000px) {
+    .block2__panel {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .block2__panel__item {
+        width: 360px;
+    }
+}
+
+@media all and (min-width: 1000px) and (max-width: 1200px) {
+    .block2__panel {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+/* для ПК*/
+@media all and (min-width: 1200px) {
+    .block2__panel_open {
+        height: 440px;
+        padding-bottom: 55px;
+    }
+
+    main .agent_mobile {
+        display: none;
+    }
+
+    .block2__panel__item {
+        width: 360px;
+    }
+}
+
+/* Пробуем инициировать Swiper  */
+.block2__swiper {
+    height: 200px;
+    border-radius: 10px;
+}
+
+.block2 {
+    margin-bottom: 77px;
+}
